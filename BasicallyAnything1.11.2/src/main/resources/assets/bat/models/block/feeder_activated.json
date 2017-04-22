@@ -1,8 +1,0 @@
-{
-    "parent": "bat:block/machine",
-    "textures": {
-        "side": "bat:blocks/machine",
-        "front": "bat:blocks/feeder_front_activated",
-        "alt": "bat:blocks/machine"
-    }
-}
