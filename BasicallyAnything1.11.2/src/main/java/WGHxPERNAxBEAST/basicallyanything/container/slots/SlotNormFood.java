@@ -17,8 +17,11 @@ public class SlotNormFood extends SlotItemHandler {
 	
 	@Override
 	public boolean isItemValid(ItemStack stack) {
-		return super.isItemValid(stack) && stack.getItem() == "normFood";
-		
+		boolean valid = false;
+		for(int id : OreDictionary.getOreIDs(stack))
+			if(id == OreDictionary.getOreID("normFood"))
+				valid = true;
+		return valid && super.isItemValid(stack);
 	}
 
 }
