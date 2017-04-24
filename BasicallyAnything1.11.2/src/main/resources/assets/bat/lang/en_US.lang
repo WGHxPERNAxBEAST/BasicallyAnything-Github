@@ -1,0 +1,41 @@
+tile.Platinum_Ore.name= Platinum Ore
+tile.Platinum_Nugget_Ore.name= Platinum Nugget Ore
+tile.Platinum_Block.name= Platinum Block
+tile.block_feeder.name= Feeder
+tile.machine_frame.name= Machine Frame
+
+item.Platinum_Pickaxe.name= Platinum Pick
+item.Platinum_Axe.name= Platinum Axe
+item.Platinum_Hoe.name= Platinum Hoe
+item.Platinum_Shovel.name= Platinum Shovel
+item.Platinum_Sword.name= Platinum Sword
+
+item.Platinum_Helmet.name=Platinum Helm
+item.Platinum_Chestplate.name=Platinum Chestplate
+item.Platinum_Leggings.name=Platinum Leggings
+item.Platinum_Boots.name=Platinum Boots
+
+item.platinum_apple.name= Platinum Apple
+item.nice_biscuit.name= Nice Biscuit
+
+item.Platinum_Ingot.name=Platinum Ingot
+item.Platinum_Nugget.name=Platinum Nugget
+
+item.chip.basic.name=Basic Micro Chip
+item.chip.advanced.name=Advanced Micro Chip
+
+item.machine_core.name=Machine Core
+
+item.beastPotion.name=Beast Potion
+
+itemGroup.BAT Blocks=Basically Any Blocks
+itemGroup.BAT Items=Basically Any Items
+itemGroup.BAT Tools=Basically Any Tools
+itemGroup.BAT Armor=Basically Any Armor
+itemGroup.BAT Combat=Basically Anything Combat
+itemGroup.BAT Food=Basically Any Food
+
+achievement.Platinum_Plated=Platinum Plated
+achievement.Platinum_Plated.desc=Wear all platinum armor
+
+container.Feeder=Feeder
