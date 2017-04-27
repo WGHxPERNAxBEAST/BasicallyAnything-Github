@@ -1,0 +1,5 @@
+{
+	"variants": {
+		"normal": { "model": "bat:gamemode_detector" }
+	}
+}
