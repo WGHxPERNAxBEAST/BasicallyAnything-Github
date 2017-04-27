@@ -1,7 +1,0 @@
-{
-	"parent": "item/handheld",
-	"textures": {
-		"layer0": "boe:items/paint_brush_0",
-		"layer1": "boe:items/paint_brush_1"
-	}
-}

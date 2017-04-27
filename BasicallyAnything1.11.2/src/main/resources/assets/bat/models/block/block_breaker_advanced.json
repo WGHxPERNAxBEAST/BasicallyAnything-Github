@@ -1,8 +1,0 @@
-{
-	"parent": "boe:block/machine",
-	"textures": {
-		"side": "boe:blocks/block_breaker_side_advanced",
-		"front": "boe:blocks/block_breaker_front_advanced",
-		"alt": "boe:blocks/machine_advanced"
-	}
-}

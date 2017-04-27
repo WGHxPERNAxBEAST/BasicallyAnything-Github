@@ -1,8 +1,0 @@
-{
-    "parent": "block/upper_slab",
-    "textures": {
-        "bottom": "boe:blocks/tin_block",
-        "top": "boe:blocks/tin_block",
-        "side": "boe:blocks/tin_block"
-    }
-}

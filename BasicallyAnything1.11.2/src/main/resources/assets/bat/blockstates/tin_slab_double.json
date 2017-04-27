@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "half=top": { "model": "boe:tin_block" },
-		"half=bottom": { "model": "boe:tin_block" }
-    }
-}
