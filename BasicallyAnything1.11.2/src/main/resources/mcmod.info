@@ -1,0 +1,16 @@
+[
+{
+  "modid": "bat",
+  "name": "Basically Anything",
+  "description": "A mod that has basically anything in it.",
+  "version": "1.o",
+  "mcversion": "1.11.2",
+  "url": "",
+  "updateUrl": "",
+  "authorList": ["WGHxPERNAxBEAST"],
+  "credits": "Me cuz, I am duh one dont weigh a ton dont need a gun to get respect up on da street.",
+  "logoFile": "",
+  "screenshots": [],
+  "dependencies": []
+}
+]
