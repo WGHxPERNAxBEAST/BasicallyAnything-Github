@@ -1,7 +1,0 @@
-{
-    "type": "CTM",
-    "textures": [
-        "blocks/machine_frame",
-        "./machine_frame"
-    ]
-}
