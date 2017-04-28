@@ -68,7 +68,6 @@ public class BasicallyAnything {
 		ModFood.register();
 		
 		BatConfig.preInit();
-		proxy.init();
 		proxy.registerRenders();
 		proxy.registerTileEntities();
 
@@ -88,7 +87,7 @@ public class BasicallyAnything {
 		RecipeHandler.registerCraftingRecipes();
 		RecipeHandler.registerFurnaceRecipes();
 		BatSoundHandler.init();
-		
+		proxy.init(); //init should go in the init method - CJMinecraft
 	}
 
 	@EventHandler
