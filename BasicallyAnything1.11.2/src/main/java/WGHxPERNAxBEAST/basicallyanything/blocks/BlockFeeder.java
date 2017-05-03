@@ -43,7 +43,7 @@ public class BlockFeeder extends BlockMachine1type {
 	public BlockFeeder(String unlocalizedName) {
 		super(unlocalizedName);
 		//Sets the default version of the block
-		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, ChipTypes.BASIC).withProperty(FACING, EnumFacing.NORTH).withProperty(ACTIVATED, Boolean.valueOf(false)));
+		this.setDefaultState(this.blockState.getBaseState().withProperty(FACING, EnumFacing.NORTH).withProperty(ACTIVATED, Boolean.valueOf(false)));
 	}
 	
 	@Override
@@ -160,13 +160,4 @@ public class BlockFeeder extends BlockMachine1type {
 		return true;
 	}
 	
-	@Override
-	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer, ItemStack stack) {
-		super.onBlockPlacedBy(worldIn, pos, state, placer, stack);
-		TileEntityFeeder te = (TileEntityFeeder) worldIn.getTileEntity(pos);
-		if (placer instanceof EntityPlayer) {
-		    te.setPlayerUUID(((EntityPlayer) placer).getGameProfile().getId());
-		}
-	
-	}
 }

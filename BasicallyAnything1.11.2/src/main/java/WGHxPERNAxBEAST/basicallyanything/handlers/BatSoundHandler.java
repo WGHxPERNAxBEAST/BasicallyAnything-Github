@@ -13,6 +13,8 @@ public class BatSoundHandler {
 	public static SoundEvent TIN_FENCE_GATE_CLOSE;
 	public static SoundEvent TIN_BUTTON_CLICK_ON;
 	public static SoundEvent TIN_BUTTON_CLICK_OFF;
+	public static SoundEvent PLASMA_IGNITION;
+	public static SoundEvent PLASMA_DEACTIVATE;
 	
 	public static void init() {
 		size = SoundEvent.REGISTRY.getKeys().size();
@@ -21,6 +23,8 @@ public class BatSoundHandler {
 		TIN_FENCE_GATE_CLOSE = register("block.tin_fence_gate.close");
 		TIN_BUTTON_CLICK_ON = register("block.tin_button.click_on");
 		TIN_BUTTON_CLICK_OFF = register("block.tin_button.click_off");
+		PLASMA_IGNITION = register("item.plasma_ignition");
+		PLASMA_DEACTIVATE = register("item.plasma_deactivate");
 	}
 	
 	public static SoundEvent register(String name) {

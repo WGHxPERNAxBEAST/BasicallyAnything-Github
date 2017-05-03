@@ -21,7 +21,7 @@ public class ModFood {
 	
 	//Initialize Items
 	public static void init() {
-		platinumApple = new ItemModFood("platinum_apple", 15, 10, false, new PotionEffect(Potion.getPotionById(1), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(3), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(10), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(11), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(16), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(22), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(24), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(26), 6000, 2, false, false));
+		platinumApple = new ItemModFood("Platinum_Apple", 15, 10, false, new PotionEffect(Potion.getPotionById(1), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(3), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(10), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(11), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(16), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(22), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(24), 6000, 2, false, false), new PotionEffect(Potion.getPotionById(26), 6000, 2, false, false));
 		niceBiscuit = new ItemModFood("nice_biscuit", 5, 3, false);
 		tinApple = new ItemModFood("tin_apple", 4, 4, false, new PotionEffect(Potion.getPotionById(3), 3600, 2), new PotionEffect(Potion.getPotionById(8), 3600, 256, false, false));
 

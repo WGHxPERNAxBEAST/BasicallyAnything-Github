@@ -5,6 +5,7 @@ import WGHxPERNAxBEAST.basicallyanything.Items.ItemChip;
 import WGHxPERNAxBEAST.basicallyanything.blocks.item.IMetaBlockName;
 import WGHxPERNAxBEAST.basicallyanything.handlers.EnumHandler.ChipTypes;
 import WGHxPERNAxBEAST.basicallyanything.init.ModItems;
+import WGHxPERNAxBEAST.basicallyanything.init.ModMachines;
 import net.minecraft.block.BlockContainer;
 import net.minecraft.block.ITileEntityProvider;
 import net.minecraft.block.material.Material;
@@ -120,7 +121,7 @@ public abstract class BlockMachine extends BlockContainer implements IMetaBlockN
 	 * @param stack The {@link ItemStack} in the player's hand
 	 */
 	public void updateMachineTier(World world, EntityPlayer player, EnumHand hand, BlockPos pos, ItemStack stack) {
-		if(stack.getItem() == ModItems.chip) {
+		if(stack.getItem() == ModMachines.chip) {
 			ChipTypes newType = ChipTypes.values()[stack.getItemDamage() % ChipTypes.values().length];
 			ChipTypes currentType = (ChipTypes) world.getBlockState(pos).getValue(TYPE);
 			IBlockState newState = world.getBlockState(pos).withProperty(TYPE, newType);

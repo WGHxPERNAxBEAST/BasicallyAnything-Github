@@ -1,20 +1,19 @@
 package WGHxPERNAxBEAST.basicallyanything.creativetabs;
 
 import WGHxPERNAxBEAST.basicallyanything.init.ModBlocks;
+import WGHxPERNAxBEAST.basicallyanything.init.ModMachines;
 import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.init.Blocks;
-import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 
-public class TabBATBlocks extends CreativeTabs{
+public class TabBATMachines extends CreativeTabs {
 
-	public TabBATBlocks() {
-		super("BAT Blocks");
+	public TabBATMachines() {
+		super("BAT Machines");
 	}
 
 	@Override
 	public ItemStack getTabIconItem() {
-		return new ItemStack(ModBlocks.platinum_block);
+		return new ItemStack(ModMachines.machine_frame, 1, 1);
 	}
 
 }

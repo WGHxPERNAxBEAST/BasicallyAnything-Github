@@ -34,9 +34,6 @@ public class GuiHandler implements IGuiHandler {
 			return new ContainerFeeder(player.inventory, (TileEntityFeeder) world.getTileEntity(new BlockPos(x, y, z)));
 		}
 		return null;
-		
-		
-
 	}
 	
 
@@ -45,6 +42,12 @@ public class GuiHandler implements IGuiHandler {
 	 */
 	@Override
 	public Object getClientGuiElement(int ID, EntityPlayer player, World world, int x, int y, int z) {
+		if(ID == BLOCK_BREAKER) {
+			return new GuiBlockBreaker(player.inventory, (TileEntityBlockBreaker) world.getTileEntity(new BlockPos(x, y, z)));
+		}
+		return null;
+	}
+	public Object getClientGuiElement1(int ID, EntityPlayer player, World world, int x, int y, int z) {
 		if(ID == FEEDER) {
 			return new GuiFeeder(player.inventory, (TileEntityFeeder) world.getTileEntity(new BlockPos(x, y, z)));
 		}

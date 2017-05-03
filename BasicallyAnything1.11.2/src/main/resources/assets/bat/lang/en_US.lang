@@ -1,30 +1,37 @@
-tile.Platinum_Ore.name= Platinum Ore
-tile.Platinum_Nugget_Ore.name= Platinum Nugget Ore
-tile.Platinum_Block.name= Platinum Block
-tile.block_feeder.name= Feeder
-tile.machine_frame.name= Machine Frame
+tile.Platinum_Ore.name=Platinum Ore
+tile.Platinum_Nugget_Ore.name=Platinum Nugget Ore
+tile.platinum_block.name=Platinum Block
+tile.block_feeder.name=Feeder
 
-item.Platinum_Pickaxe.name= Platinum Pick
-item.Platinum_Axe.name= Platinum Axe
-item.Platinum_Hoe.name= Platinum Hoe
-item.Platinum_Shovel.name= Platinum Shovel
-item.Platinum_Sword.name= Platinum Sword
+item.Platinum_Pickaxe.name=Platinum Pick
+item.Platinum_Axe.name=Platinum Axe
+item.Platinum_Hoe.name=Platinum Hoe
+item.Platinum_Shovel.name=Platinum Shovel
+item.Platinum_Sword.name=Platinum Sword
+
+item.plasma_beam.name=Plasma Beam
+item.Plasma_Handle.name=Plasma Beam Handle
+item.plasma_core.name=Plasma Core
+item.plasma_beam_director.name=Plasma Beam Director
 
 item.Platinum_Helmet.name=Platinum Helm
 item.Platinum_Chestplate.name=Platinum Chestplate
 item.Platinum_Leggings.name=Platinum Leggings
 item.Platinum_Boots.name=Platinum Boots
 
-item.platinum_apple.name= Platinum Apple
-item.nice_biscuit.name= Nice Biscuit
+item.Platinum_Apple.name=Platinum Apple
+item.nice_biscuit.name=Nice Biscuit
 
 item.Platinum_Ingot.name=Platinum Ingot
 item.Platinum_Nugget.name=Platinum Nugget
+item.platinum_stick.name=Platinum Stick
+item.plasma_ingot.name=Plasma Ingot
 
 item.chip.basic.name=Basic Micro Chip
 item.chip.advanced.name=Advanced Micro Chip
 
-item.machine_core.name=Machine Core
+item.machine_core.basic.name=Basic Machine Core
+item.machine_core.advanced.name=Advanced Machine Core
 
 item.beastPotion.name=Beast Potion
 
@@ -34,6 +41,7 @@ itemGroup.BAT Tools=Basically Any Tools
 itemGroup.BAT Armor=Basically Any Armor
 itemGroup.BAT Combat=Basically Anything Combat
 itemGroup.BAT Food=Basically Any Food
+itemGroup.BAT Machines=Basically Any Machine
 
 achievement.Platinum_Plated=Platinum Plated
 achievement.Platinum_Plated.desc=Wear all platinum armor
@@ -51,8 +59,8 @@ tile.tin_fence_gate.name=Tin Fence Gate
 tile.block_breaker.basic.name=Block Breaker (Basic)
 tile.block_breaker.advanced.name=Block Breaker (Advanced)
 tile.gamemode_detector.name=Gamemode Detector
-tile.machine_frame.basic.name=Machine Frame (Basic)
-tile.machine_frame.advanced.name=Machine Frame (Advanced)
+tile.machine_frame.basic.name=Basic Machine Frame
+tile.machine_frame.advanced.name=Advanced Machine Frame
 tile.tin_button.name=Tin Button
 tile.tin_pressure_plate.name=Tin Pressure Plate
 tile.tin_door.name=Tin Door
@@ -88,7 +96,7 @@ bat.heart.tooltip=Heals the player
 bat.soul_stealer.tooltip=Steals the hearts of entities
 
 achievement.tinman=Tin Man
-achievement.tinman.desc=Wear all tin armour
+achievement.tinman.desc=Wear all tin armor
 
 container.block_breaker=Block Breaker
 

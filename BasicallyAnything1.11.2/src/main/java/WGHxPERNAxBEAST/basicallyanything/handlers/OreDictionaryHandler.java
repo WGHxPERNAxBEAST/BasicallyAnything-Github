@@ -3,6 +3,7 @@ package WGHxPERNAxBEAST.basicallyanything.handlers;
 import WGHxPERNAxBEAST.basicallyanything.init.ModBlocks;
 import WGHxPERNAxBEAST.basicallyanything.init.ModFood;
 import WGHxPERNAxBEAST.basicallyanything.init.ModItems;
+import WGHxPERNAxBEAST.basicallyanything.init.ModMachines;
 import WGHxPERNAxBEAST.basicallyanything.util.Utils;
 import net.minecraft.init.Items;
 import net.minecraft.item.ItemStack;
@@ -16,6 +17,7 @@ public class OreDictionaryHandler {
 		OreDictionary.registerOre("nuggetPlatinum", ModItems.platinumNugget);
 		OreDictionary.registerOre("blockPlatinum", ModBlocks.platinum_block);
 		OreDictionary.registerOre("orePlatinum", ModBlocks.platinum_ore);
+		OreDictionary.registerOre("stickPlatinum", ModItems.platinumStick);
 
 		OreDictionary.registerOre("normFood", Items.APPLE);
 		OreDictionary.registerOre("normFood", Items.BAKED_POTATO);
@@ -46,12 +48,18 @@ public class OreDictionaryHandler {
 		OreDictionary.registerOre("ingotTin", ModItems.tinIngot);
 		OreDictionary.registerOre("nuggetTin", ModItems.tinNugget);
 		OreDictionary.registerOre("blockTin", ModBlocks.tinBlock);
-		OreDictionary.registerOre("chipBasic", new ItemStack(ModItems.chip, 1, 0)); //Basic Chip
-		OreDictionary.registerOre("chipAdvanced", new ItemStack(ModItems.chip, 1, 1)); //Advanced Chip
-		OreDictionary.registerOre("fabric", new ItemStack(ModItems.fabric));
 		OreDictionary.registerOre("stickTin", ModItems.tinStick);
-
-
+		
+		OreDictionary.registerOre("fabric", new ItemStack(ModItems.fabric));		
+		
+		OreDictionary.registerOre("chipBasic", new ItemStack(ModMachines.chip, 1, 0)); //Basic 
+		OreDictionary.registerOre("chipAdvanced", new ItemStack(ModMachines.chip, 1, 1)); //Advanced 
+		OreDictionary.registerOre("machineframeBasic", new ItemStack(ModMachines.machine_frame, 1, 0)); //Basic 
+		OreDictionary.registerOre("machineframeAdvanced", new ItemStack(ModMachines.machine_frame, 1, 1)); //Advanced 
+		OreDictionary.registerOre("machinecoreBasic", new ItemStack(ModMachines.machine_core, 1, 0)); //Basic 
+		OreDictionary.registerOre("machinecoreAdvanced", new ItemStack(ModMachines.machine_core, 1, 1)); //Advanced 
+		
+		OreDictionary.registerOre("ingotPlasma", ModItems.plasmaIngot);
 	}
 
 }

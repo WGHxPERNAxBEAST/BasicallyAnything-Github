@@ -156,9 +156,6 @@ public boolean isUseableByPlayer(EntityPlayer player) {
 	return this.world.getTileEntity(this.getPos()) == this
 			&& player.getDistanceSq(this.pos.add(0.5, 0.5, 0.5)) <= 64;
 }
-public void setPlayerUUID(UUID id) {
-	this.setPlayerUUID(id);
-}
 @Override
 public void update() {
 	if (this.world != null) {

@@ -42,7 +42,7 @@ public class BatConfig {
 	 * Called on the server and the client setting up the config file
 	 */
 	public static void preInit() {
-		File configFile = new File(Loader.instance().getConfigDir(), "BitOfEverything.cfg");
+		File configFile = new File(Loader.instance().getConfigDir(), "BasicallyAnything.cfg");
 		config = new Configuration(configFile);
 		syncFromFiles();
 	}
@@ -92,12 +92,12 @@ public class BatConfig {
 		if(loadFromConfigFile)
 			config.load();
 		
-		Property propertyMachineCooldownBasic = config.get(CATEGORY_NAME_BLOCKS, "machine_cooldown_basic", 100);
+		Property propertyMachineCooldownBasic = config.get(CATEGORY_NAME_BLOCKS, "machine_cooldown_basic", 50);
 		propertyMachineCooldownBasic.setLanguageKey("gui.config.blocks.machine_cooldown_basic.name");
 		propertyMachineCooldownBasic.setComment(I18n.format("gui.config.blocks.machine_cooldown_basic.comment"));
 		propertyMachineCooldownBasic.setMinValue(10);
 		propertyMachineCooldownBasic.setMaxValue(200);
-		Property propertyMachineCooldownAdvanced = config.get(CATEGORY_NAME_BLOCKS, "machine_cooldown_advanced", 50);
+		Property propertyMachineCooldownAdvanced = config.get(CATEGORY_NAME_BLOCKS, "machine_cooldown_advanced", 25);
 		propertyMachineCooldownAdvanced.setLanguageKey("gui.config.blocks.machine_cooldown_advanced.name");
 		propertyMachineCooldownAdvanced.setComment(I18n.format("gui.config.blocks.machine_cooldown_advanced.comment"));
 		propertyMachineCooldownAdvanced.setMinValue(10);

@@ -12,6 +12,7 @@ import WGHxPERNAxBEAST.basicallyanything.client.gui.GuiBlockBreaker;
 import WGHxPERNAxBEAST.basicallyanything.config.BatConfig;
 import WGHxPERNAxBEAST.basicallyanything.handlers.EnumHandler.ChipTypes;
 import WGHxPERNAxBEAST.basicallyanything.init.ModBlocks;
+import WGHxPERNAxBEAST.basicallyanything.init.ModMachines;
 import WGHxPERNAxBEAST.basicallyanything.util.Utils;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockDynamicLiquid;
@@ -119,7 +120,7 @@ public class TileEntityBlockBreaker extends TileEntity implements ITickable, ICa
 					breakBlock(facing); // Calls our break block method which handles the actual breaking of the block
 				}
 			} else if (!this.world.isBlockPowered(pos)) { // If the block is not powered
-				if (!this.world.isAirBlock(pos) && this.world.getBlockState(pos).getBlock() == ModBlocks.breaker) { // The block is not air and it is a block breaker
+				if (!this.world.isAirBlock(pos) && this.world.getBlockState(pos).getBlock() == ModMachines.breaker) { // The block is not air and it is a block breaker
 					if (this.world.getBlockState(pos).getValue(BlockBreaker.ACTIVATED)) { // Checks if it is activated
 						IBlockState currentState = this.world.getBlockState(pos);
 						this.world.setBlockState(pos,

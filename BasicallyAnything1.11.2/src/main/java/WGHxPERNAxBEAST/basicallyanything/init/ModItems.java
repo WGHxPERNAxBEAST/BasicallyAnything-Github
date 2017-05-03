@@ -8,6 +8,7 @@ import WGHxPERNAxBEAST.basicallyanything.Items.ItemModIngot;
 import WGHxPERNAxBEAST.basicallyanything.Items.ItemModItem;
 import WGHxPERNAxBEAST.basicallyanything.Items.ItemModNugget;
 import WGHxPERNAxBEAST.basicallyanything.Items.ItemPaintBrush;
+import WGHxPERNAxBEAST.basicallyanything.Items.ItemPlasmaHandle;
 import WGHxPERNAxBEAST.basicallyanything.Items.ItemTinIngot;
 import WGHxPERNAxBEAST.basicallyanything.handlers.EnumHandler;
 import WGHxPERNAxBEAST.basicallyanything.util.Utils;
@@ -26,41 +27,43 @@ public class ModItems {
 	//State Items
 	public static Item platinumIngot;
 	public static Item platinumNugget;
-	public static Item machine_core;
 	public static Item tinIngot;
+	public static Item tinNugget; 
+	public static Item tinStick;
+	public static Item plasmaIngot;
+	public static Item platinumStick;
 	public static Item heart;
-	public static Item chip;
 	public static Item infinityFlame;
-	public static Item tinNugget;
 	public static Item paintBrush;
 	public static Item fabric;
-	public static Item tinStick;
-
-
+	public static Item plasmaHandle;
+	public static Item plasmaCore;
+	public static Item plasmaBeamDirector;
 	
 	//Initialize Items
 	public static void init() {
 		platinumIngot = new ItemModIngot("Platinum_Ingot", "Platinum_Ingot");
 		platinumNugget = new ItemModNugget("Platinum_Nugget", "Platinum_Nugget");
-		chip = new ItemChip("chip");
-		machine_core = new ItemModItem("machine_core");
 		tinIngot = new ItemTinIngot("tin_ingot", "tin_ingot");
+		plasmaIngot = new ItemModIngot("plasma_ingot", "plasma_ingot");
+		platinumStick = new Item().setUnlocalizedName("platinum_stick").setRegistryName(new ResourceLocation(Reference.MODID, "platinum_stick"));
 		heart = new ItemHeart("heart");
 		infinityFlame = new Item().setUnlocalizedName("infinity_flame").setRegistryName(new ResourceLocation(Reference.MODID, "infinity_flame"));
 		tinNugget = new Item().setUnlocalizedName("tin_nugget").setRegistryName(new ResourceLocation(Reference.MODID, "tin_nugget"));
 		paintBrush = new ItemPaintBrush("paint_brush");
 		fabric = new Item().setUnlocalizedName("fabric").setRegistryName(new ResourceLocation(Reference.MODID, "fabric"));
 		tinStick = new Item().setUnlocalizedName("tin_stick").setRegistryName(new ResourceLocation(Reference.MODID, "tin_stick"));
-
-
+		plasmaHandle = new ItemPlasmaHandle("Plasma_Handle", new ItemStack(ModItems.plasmaCore));
+		plasmaCore = new Item().setUnlocalizedName("plasma_core").setRegistryName(new ResourceLocation(Reference.MODID, "plasma_core"));
+		plasmaBeamDirector = new Item().setUnlocalizedName("plasma_beam_director").setRegistryName(new ResourceLocation(Reference.MODID, "plasma_beam_director"));
 	}
 	
 	//Register Items
 		public static void register() {
 			registerItem(platinumIngot);
 			registerItem(platinumNugget);
-			registerItem(chip);
-			registerItem(machine_core);
+			registerItem(plasmaIngot);
+			registerItem(platinumStick);
 			registerItem(tinIngot);
 			registerItem(heart);
 			registerItem(infinityFlame);
@@ -68,17 +71,17 @@ public class ModItems {
 			registerItem(paintBrush);
 			registerItem(fabric);
 			registerItem(tinStick);
-
+			registerItem(plasmaHandle);
+			registerItem(plasmaCore);
+			registerItem(plasmaBeamDirector);
 		}
 		
 	
 	public static void registerRenders() {
 		registerRender(platinumIngot);
 		registerRender(platinumNugget);
-		registerRender(machine_core);
-		for(int i = 0; i < EnumHandler.ChipTypes.values().length; i++) {
-			registerRender(chip, i, "chip_" + EnumHandler.ChipTypes.values()[i].getName());
-		}
+		registerRender(plasmaIngot);
+		registerRender(platinumStick);
 		registerRender(tinIngot);
 		registerRender(heart);
 		registerRender(infinityFlame);
@@ -86,7 +89,9 @@ public class ModItems {
 		registerRender(paintBrush);
 		registerRender(fabric);
 		registerRender(tinStick);
-
+		registerRender(plasmaHandle);
+		registerRender(plasmaCore);
+		registerRender(plasmaBeamDirector);
 	}
 
 /**
@@ -105,8 +110,17 @@ public class ModItems {
 			}
 		}, paintBrush);
 		Utils.getLogger().info("Registered item colours!");
-	}
-
+	
+	Minecraft.getMinecraft().getItemColors().registerItemColorHandler(new IItemColor() {
+		
+		public int getColorFromItemstack(ItemStack stack, int tintIndex) {
+			if(stack.hasTagCompound() && tintIndex == 1)
+				if(stack.getTagCompound().hasKey("colour"))
+					return stack.getTagCompound().getInteger("colour");
+			return 0x0b27cd;
+		}
+	}, platinumIngot);
+}
 	
 	public static void registerItem(Item item) {
 		item.setCreativeTab(BasicallyAnything.items);

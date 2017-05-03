@@ -8,6 +8,10 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 
 public class CommonProxy {
 	
+	public void preInit() {
+	
+	}
+	
 	public void init() {
 
 	}
@@ -15,7 +19,8 @@ public class CommonProxy {
 	public void registerTileEntities() {
 		GameRegistry.registerTileEntity(TileEntityFeeder.class, Reference.MODID + ":feeder");
 
-	GameRegistry.registerTileEntity(TileEntityBlockBreaker.class, Reference.MODID + ":block_breaker");
+		GameRegistry.registerTileEntity(TileEntityBlockBreaker.class, Reference.MODID + ":block_breaker");
+		
 		GameRegistry.registerTileEntity(TileEntityCanvas.class, Reference.MODID + ":canvas");
 
 	}

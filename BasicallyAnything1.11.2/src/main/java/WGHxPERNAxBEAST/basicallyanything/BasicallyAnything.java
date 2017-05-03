@@ -7,6 +7,7 @@ import WGHxPERNAxBEAST.basicallyanything.creativetabs.TabBATBlocks;
 import WGHxPERNAxBEAST.basicallyanything.creativetabs.TabBATCombat;
 import WGHxPERNAxBEAST.basicallyanything.creativetabs.TabBATFood;
 import WGHxPERNAxBEAST.basicallyanything.creativetabs.TabBATItems;
+import WGHxPERNAxBEAST.basicallyanything.creativetabs.TabBATMachines;
 import WGHxPERNAxBEAST.basicallyanything.creativetabs.TabBATTools;
 import WGHxPERNAxBEAST.basicallyanything.handlers.AchievementHandler;
 import WGHxPERNAxBEAST.basicallyanything.handlers.BatSoundHandler;
@@ -18,6 +19,8 @@ import WGHxPERNAxBEAST.basicallyanything.init.ModBlocks;
 import WGHxPERNAxBEAST.basicallyanything.init.ModCombat;
 import WGHxPERNAxBEAST.basicallyanything.init.ModFood;
 import WGHxPERNAxBEAST.basicallyanything.init.ModItems;
+import WGHxPERNAxBEAST.basicallyanything.init.ModMachines;
+import WGHxPERNAxBEAST.basicallyanything.init.ModTabless;
 import WGHxPERNAxBEAST.basicallyanything.init.ModTools;
 import WGHxPERNAxBEAST.basicallyanything.proxy.CommonProxy;
 import WGHxPERNAxBEAST.basicallyanything.worldgen.OreGen;
@@ -34,11 +37,12 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 @Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
 public class BasicallyAnything {
 	
+	public static final CreativeTabs machines = new TabBATMachines();
 	public static final CreativeTabs blocks = new TabBATBlocks();
 	public static final CreativeTabs items = new TabBATItems();
 	public static final CreativeTabs tools = new TabBATTools();
-	public static final CreativeTabs armor = new TabBATArmor();
 	public static final CreativeTabs combat = new TabBATCombat();
+	public static final CreativeTabs armor = new TabBATArmor();
 	public static final CreativeTabs food = new TabBATFood();
 	
 	WGHxPERNAxBEAST.basicallyanything.handlers.EventHandler eventHandler = new WGHxPERNAxBEAST.basicallyanything.handlers.EventHandler();
@@ -52,23 +56,27 @@ public class BasicallyAnything {
 	@EventHandler
 	public void preinit(FMLPreInitializationEvent event) {
 		//////////////////Initialization//////////////////////////////////////////
+		ModMachines.init();
 		ModItems.init();
 		ModBlocks.init();
 		ModTools.init();
 		ModArmor.init();
 		ModCombat.init();
 		ModFood.init();
+		ModTabless.init();
 		
 		//////////////////REGISTER////////////////////////////////////////////////		
+		ModMachines.register();
 		ModItems.register();
 		ModBlocks.register();
 		ModTools.register();
 		ModArmor.register();
 		ModCombat.register();
 		ModFood.register();
+		ModTabless.register();
 		
 		BatConfig.preInit();
-		proxy.init();
+		proxy.preInit();
 		proxy.registerRenders();
 		proxy.registerTileEntities();
 
@@ -88,7 +96,7 @@ public class BasicallyAnything {
 		RecipeHandler.registerCraftingRecipes();
 		RecipeHandler.registerFurnaceRecipes();
 		BatSoundHandler.init();
-		
+		proxy.init();
 	}
 
 	@EventHandler

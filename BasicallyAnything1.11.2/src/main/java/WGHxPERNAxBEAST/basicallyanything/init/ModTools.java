@@ -7,7 +7,9 @@ import WGHxPERNAxBEAST.basicallyanything.Items.ItemModHoe;
 import WGHxPERNAxBEAST.basicallyanything.Items.ItemModPickaxe;
 import WGHxPERNAxBEAST.basicallyanything.Items.ItemModShovel;
 import WGHxPERNAxBEAST.basicallyanything.util.Utils;
+import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.block.model.ModelResourceLocation;
+import net.minecraft.client.renderer.color.IItemColor;
 import net.minecraft.item.Item;
 import net.minecraft.item.Item.ToolMaterial;
 import net.minecraft.item.ItemHoe;
@@ -18,6 +20,8 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraftforge.client.model.ModelLoader;
 import net.minecraftforge.common.util.EnumHelper;
 import net.minecraftforge.fml.common.registry.GameRegistry;
+import net.minecraftforge.fml.relauncher.Side;
+import net.minecraftforge.fml.relauncher.SideOnly;
 
 public class ModTools {
 	
@@ -43,7 +47,6 @@ public class ModTools {
 		tinAxe = new ItemModAxe(tinMaterial, "tin_axe", new ItemStack(ModItems.tinIngot));
 		tinHoe = new ItemModHoe(tinMaterial, "tin_hoe", new ItemStack(ModItems.tinIngot));
 		tinShovel = new ItemModShovel(tinMaterial, "tin_shovel", new ItemStack(ModItems.tinIngot));
-
 	}
 	
 	public static void register() {
@@ -71,6 +74,21 @@ public class ModTools {
 		
 	}
 
+	@SideOnly(Side.CLIENT)
+	public static void registerItemColours() {
+		Minecraft.getMinecraft().getItemColors().registerItemColorHandler(new IItemColor() {
+			
+			@Override
+			public int getColorFromItemstack(ItemStack stack, int tintIndex) {
+				if(stack.hasTagCompound() && tintIndex == 1)
+					if(stack.getTagCompound().hasKey("colour"))
+						return stack.getTagCompound().getInteger("colour");
+				return 0x0b27cd;
+			}
+		}, platinumPickaxe);
+		Utils.getLogger().info("Registered item colors!");
+	}
+	
 	public static void registerItem(Item item) {
 		item.setCreativeTab(BasicallyAnything.tools);
 		GameRegistry.register(item);

@@ -19,7 +19,6 @@ public class ModCombat {
 	
 	public static final ToolMaterial platinumMaterial = EnumHelper.addToolMaterial(Reference.MODID + ":platinum", 12, 100000, 20.0F, 18.0F, 90);
 	public static final ToolMaterial tinMaterial = EnumHelper.addToolMaterial(Reference.MODID + ":tin", 2, 300, 5.0F, 2.0F, 12);
-
 	
 	public static ItemSword platinumSword;
 	public static ItemSword tinSword;
@@ -39,12 +38,14 @@ public class ModCombat {
 	public static void register() {
 		registerItem(platinumSword);
 		registerItem(tinSword);
+		
 		registerItem(soulStealer);
 	}
 	
 	public static void registerRenders(){
 		registerRender(platinumSword);
 		registerRender(tinSword);
+		
 		registerRender(soulStealer);
 
 	}
