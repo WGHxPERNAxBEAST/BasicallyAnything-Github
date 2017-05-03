@@ -1,8 +1,0 @@
-{
-    "parent": "block/inner_stairs",
-    "textures": {
-        "bottom": "bat:blocks/tin_block",
-        "top": "bat:blocks/tin_block",
-        "side": "bat:blocks/tin_block"
-    }
-}

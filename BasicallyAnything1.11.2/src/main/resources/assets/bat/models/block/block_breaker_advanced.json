@@ -1,8 +1,0 @@
-{
-	"parent": "bat:block/machine",
-	"textures": {
-		"side": "bat:blocks/machine_advanced",
-		"front": "bat:blocks/block_breaker_front_advanced",
-		"alt": "bat:blocks/machine_advanced"
-	}
-}

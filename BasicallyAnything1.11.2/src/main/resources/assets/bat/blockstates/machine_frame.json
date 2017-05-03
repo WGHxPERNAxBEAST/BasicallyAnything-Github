@@ -1,6 +1,0 @@
-{
-	"variants": {
-		"type=basic": { "model": "bat:machine_frame_basic" },
-		"type=advanced": { "model": "bat:machine_frame_advanced" }
-	}
-}

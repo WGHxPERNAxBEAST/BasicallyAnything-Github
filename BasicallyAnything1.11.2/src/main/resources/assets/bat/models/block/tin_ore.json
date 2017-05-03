@@ -1,6 +1,0 @@
-{
-	"parent": "block/cube_all",
-	"textures": {
-		"all": "bat:blocks/tin_ore"
-	}
-}
