@@ -26,7 +26,7 @@ public class ItemPlasmaHandle extends Item {
 		this.setUnlocalizedName(unlocalizedName);
 		this.setRegistryName(new ResourceLocation(Reference.MODID, unlocalizedName));
 		this.getIsRepairable(new ItemStack(this), repair);
-		new ItemStack(ModTabless.PlasmaBeam).setTagCompound(this.getNBTShareTag(new ItemStack(this)));
+		new ItemStack(ModTabless.PlasmaBeam).setTagCompound(new ItemStack(this).getTagCompound());
 	}
 
 	@Override

@@ -29,7 +29,7 @@ public class ItemPlasmaBeam extends ItemTool {
 		super(attackDamageIn, attackSpeedIn, materialIn, effectiveBlocksIn);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setRegistryName(new ResourceLocation(Reference.MODID, unlocalizedName));
-		new ItemStack(ModItems.plasmaHandle).setTagCompound(this.getNBTShareTag(new ItemStack(this)));
+		new ItemStack(ModItems.plasmaHandle).setTagCompound(new ItemStack(this).getTagCompound());
 	}
 	
 	@Override
