@@ -1,0 +1,7 @@
+{
+	"type": "CTM",
+	"textures": [
+		"blocks/Platinum_Block",
+		"./Platinum_Block"
+	]
+}

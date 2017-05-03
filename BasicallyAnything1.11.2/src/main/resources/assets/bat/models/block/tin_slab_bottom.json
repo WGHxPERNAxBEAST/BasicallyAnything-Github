@@ -1,0 +1,8 @@
+{
+    "parent": "block/half_slab",
+    "textures": {
+        "bottom": "bat:blocks/tin_block",
+        "top": "bat:blocks/tin_block",
+        "side": "bat:blocks/tin_block"
+    }
+}

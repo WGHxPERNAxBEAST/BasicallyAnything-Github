@@ -1,0 +1,7 @@
+{
+    "parent": "block/door_bottom_rh",
+    "textures": {
+        "bottom": "bat:blocks/door_tin_lower",
+        "top": "bat:blocks/door_tin_upper"
+    }
+}
