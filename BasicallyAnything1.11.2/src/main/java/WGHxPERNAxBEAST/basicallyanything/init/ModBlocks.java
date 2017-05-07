@@ -3,6 +3,7 @@ package WGHxPERNAxBEAST.basicallyanything.init;
 import WGHxPERNAxBEAST.basicallyanything.BasicallyAnything;
 import WGHxPERNAxBEAST.basicallyanything.Reference;
 import WGHxPERNAxBEAST.basicallyanything.blocks.BlockCanvas;
+import WGHxPERNAxBEAST.basicallyanything.blocks.BlockPlasmaLantern;
 import WGHxPERNAxBEAST.basicallyanything.blocks.BlockPlatinum;
 import WGHxPERNAxBEAST.basicallyanything.blocks.BlockPlatinumNuggetOre;
 import WGHxPERNAxBEAST.basicallyanything.blocks.BlockPlatinumOre;
@@ -58,7 +59,7 @@ public class ModBlocks {
 	public static Block tinPressurePlate;
 	public static BlockTinDoor tinDoor;
 	public static Block canvas;
-	
+	public static Block plasmaLantern;
 
 	public static void init() {
 		platinum_ore = new BlockPlatinumOre("Platinum_Ore", "Platinum_Ore");
@@ -75,7 +76,7 @@ public class ModBlocks {
 		tinPressurePlate = new BlockTinPressurePlate("tin_pressure_plate");
 		tinDoor = new BlockTinDoor("tin_door");
 		canvas = new BlockCanvas("canvas");
-
+		plasmaLantern = new BlockPlasmaLantern("plasma_lantern");
 	}
 	
 	public static void register() {
@@ -93,18 +94,12 @@ public class ModBlocks {
 		registerBlock(tinPressurePlate);
 		registerBlock(tinDoor, new ItemBlockDoor(tinDoor));
 		registerBlock(canvas);
-
+		registerBlock(plasmaLantern);
 	}
 	
 	public static void registerRenders() {
 		registerRender(platinum_ore);
-		for(int i = 0; i < EnumHandler.OreType.values().length; i++) {
-			registerRender(platinum_nugget_ore, i, "platinum_nugget_ore_" + EnumHandler.OreType.values()[i].getName());
-		}
 		registerRender(platinum_block);
-		for(int i = 0; i < EnumHandler.OreType.values().length; i++) {
-			registerRender(tinOre, i, "tin_ore_" + EnumHandler.OreType.values()[i].getName());
-		}
 		registerRender(tinBlock);
 		registerRender(tinSlabHalf);
 		registerRender(tinStairs);
@@ -114,7 +109,12 @@ public class ModBlocks {
 		registerRender(tinPressurePlate);
 		registerRender(tinDoor);
 		registerRender(canvas);
-
+		registerRender(plasmaLantern);
+		
+		for(int i = 0; i < EnumHandler.OreType.values().length; i++) {
+			registerRender(platinum_nugget_ore, i, "platinum_nugget_ore_" + EnumHandler.OreType.values()[i].getName());
+			registerRender(tinOre, i, "tin_ore_" + EnumHandler.OreType.values()[i].getName());
+		}
 	}
 	
 	@SideOnly(Side.CLIENT)

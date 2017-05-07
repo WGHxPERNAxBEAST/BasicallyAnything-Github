@@ -6,7 +6,7 @@ import net.minecraft.util.ResourceLocation;
 
 public class ItemModIngot extends Item {
 	
-	public ItemModIngot(String unlocalizedName, String registryName) {
+	public ItemModIngot(String unlocalizedName) {
 		this.setUnlocalizedName(unlocalizedName);
 		this.setRegistryName(new ResourceLocation(Reference.MODID, unlocalizedName));
 		

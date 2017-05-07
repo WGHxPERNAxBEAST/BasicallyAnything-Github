@@ -1,16 +1,16 @@
 {
     "variants": {
-        "activated=false,facing=north,type=basic": { "model": "bat:feeder" },
-        "activated=false,facing=south,type=basic": { "model": "bat:feeder", "y": 180 },
-        "activated=false,facing=east,type=basic": { "model": "bat:feeder", "y": 90 },
-        "activated=false,facing=west,type=basic": { "model": "bat:feeder", "y": 270 },
-        "activated=false,facing=up,type=basic": { "model": "bat:feeder", "x": 270 },
-        "activated=false,facing=down,type=basic": { "model": "bat:feeder", "x": 90 },
-        "activated=true,facing=north,type=basic": { "model": "bat:feeder_activated" },
-        "activated=true,facing=south,type=basic": { "model": "bat:feeder_activated", "y": 180 },
-        "activated=true,facing=east,type=basic": { "model": "bat:feeder_activated", "y": 90 },
-        "activated=true,facing=west,type=basic": { "model": "bat:feeder_activated", "y": 270 },
-        "activated=true,facing=up,type=basic": { "model": "bat:feeder_activated", "x": 270 },
-        "activated=true,facing=down,type=basic": { "model": "bat:feeder_activated", "x": 90 }
+        "activated=false,facing=north": { "model": "bat:feeder" },
+        "activated=false,facing=south": { "model": "bat:feeder", "y": 180 },
+        "activated=false,facing=east": { "model": "bat:feeder", "y": 90 },
+        "activated=false,facing=west": { "model": "bat:feeder", "y": 270 },
+        "activated=false,facing=up": { "model": "bat:feeder", "x": 270 },
+        "activated=false,facing=down": { "model": "bat:feeder", "x": 90 },
+        "activated=true,facing=north": { "model": "bat:feeder_activated" },
+        "activated=true,facing=south": { "model": "bat:feeder_activated", "y": 180 },
+        "activated=true,facing=east": { "model": "bat:feeder_activated", "y": 90 },
+        "activated=true,facing=west": { "model": "bat:feeder_activated", "y": 270 },
+        "activated=true,facing=up": { "model": "bat:feeder_activated", "x": 270 },
+        "activated=true,facing=down": { "model": "bat:feeder_activated", "x": 90 }
     }
 }

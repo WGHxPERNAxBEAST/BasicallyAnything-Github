@@ -42,10 +42,10 @@ public class ModItems {
 	
 	//Initialize Items
 	public static void init() {
-		platinumIngot = new ItemModIngot("Platinum_Ingot", "Platinum_Ingot");
+		platinumIngot = new ItemModIngot("Platinum_Ingot");
 		platinumNugget = new ItemModNugget("Platinum_Nugget", "Platinum_Nugget");
 		tinIngot = new ItemTinIngot("tin_ingot", "tin_ingot");
-		plasmaIngot = new ItemModIngot("plasma_ingot", "plasma_ingot");
+		plasmaIngot = new ItemModIngot("plasma_ingot");
 		platinumStick = new Item().setUnlocalizedName("platinum_stick").setRegistryName(new ResourceLocation(Reference.MODID, "platinum_stick"));
 		heart = new ItemHeart("heart");
 		infinityFlame = new Item().setUnlocalizedName("infinity_flame").setRegistryName(new ResourceLocation(Reference.MODID, "infinity_flame"));
@@ -53,7 +53,7 @@ public class ModItems {
 		paintBrush = new ItemPaintBrush("paint_brush");
 		fabric = new Item().setUnlocalizedName("fabric").setRegistryName(new ResourceLocation(Reference.MODID, "fabric"));
 		tinStick = new Item().setUnlocalizedName("tin_stick").setRegistryName(new ResourceLocation(Reference.MODID, "tin_stick"));
-		plasmaHandle = new ItemPlasmaHandle("Plasma_Handle", new ItemStack(ModItems.plasmaCore));
+		plasmaHandle = new ItemPlasmaHandle("plasma_handle", new ItemStack(ModItems.plasmaCore));
 		plasmaCore = new Item().setUnlocalizedName("plasma_core").setRegistryName(new ResourceLocation(Reference.MODID, "plasma_core"));
 		plasmaBeamDirector = new Item().setUnlocalizedName("plasma_beam_director").setRegistryName(new ResourceLocation(Reference.MODID, "plasma_beam_director"));
 	}

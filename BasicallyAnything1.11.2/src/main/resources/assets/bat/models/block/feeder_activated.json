@@ -1,7 +1,7 @@
 {
     "parent": "bat:block/machine",
     "textures": {
-        "side": "bat:blocks/machine_frame",
+        "side": "bat:blocks/machine_advanced",
         "front": "bat:blocks/feeder_front_activated",
         "alt": "bat:blocks/machine_advanced"
     }

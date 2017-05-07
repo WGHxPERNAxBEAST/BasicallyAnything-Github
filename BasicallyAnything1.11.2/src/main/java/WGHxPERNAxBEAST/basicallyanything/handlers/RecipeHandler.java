@@ -29,18 +29,18 @@ public class RecipeHandler {
 
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModFood.platinumApple),
 				new Object[] { "PPP", "PGP", "PPP", 'P', "blockPlatinum", 'G', Items.GOLDEN_APPLE}));
-		GameRegistry.addRecipe(new ItemStack(ModBlocks.platinum_block),
-				new Object[] { "PPP", "PPP", "PPP", 'P', ModItems.platinumIngot });
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.platinum_block),
+				new Object[] { "PPP", "PPP", "PPP", 'P', ModItems.platinumIngot }));
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.platinumIngot, 9),
 				new Object[] { ModBlocks.platinum_block });
-		GameRegistry.addRecipe(new ItemStack(ModItems.platinumIngot),
-				new Object[] { "NNN", "NNN", "NNN", 'N', ModItems.platinumNugget});
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.platinumIngot),
+				new Object[] { "NNN", "NNN", "NNN", 'N', ModItems.platinumNugget}));
 		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.platinumNugget, 9),
 				new Object[] { ModItems.platinumIngot });
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.plasmaIngot), 
 				new Object[] {"TP", "PT", 'T', "ingotTin", 'P', "ingotPlatinum"}));
-		GameRegistry.addRecipe(new ItemStack(ModMachines.feeder),
-				new Object[] { "FNF", "NCN", "FNF", 'N', "normFood", 'F',  "machineframeAdvanced", 'C', "machinecoreAdvanced" });
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModMachines.feeder),
+				new Object[] { "FNF", "NCN", "FNF", 'N', "normFood", 'F',  "machineframeAdvanced", 'C', "machinecoreAdvanced" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModMachines.machine_core, 1, 0), 
 				new Object[] { "TDT", "RCR", "TDT", 'T', "ingotPlatinum", 'D', "dustRedstone", 'C', Items.COMPARATOR, 'R', Items.REPEATER }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModMachines.machine_core, 1, 1), 
@@ -49,12 +49,14 @@ public class RecipeHandler {
 				new Object[] { "TRT", "RGR", "TRT", 'T', "ingotPlatinum", 'R', "machinecoreBasic", 'G', "dyeRed" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModMachines.chip, 1, 1), 
 				new Object[] { "TRT", "RCR", "TRT", 'T', "ingotPlatinum", 'R', "machinecoreAdvanced", 'C', "chipBasic" }));
-		GameRegistry.addRecipe(new ItemStack(ModItems.plasmaHandle),
-				new Object[] { "SDS", "SCS", "SIS", 'S', ModItems.platinumStick, 'D',  ModItems.plasmaBeamDirector, 'C', ModItems.plasmaCore, 'I', ModItems.platinumIngot });
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.plasmaHandle),
+				new Object[] { "SDS", "SCS", "SIS", 'S', "stickPlatinum", 'D',  ModItems.plasmaBeamDirector, 'C', ModItems.plasmaCore, 'I', "ingotPlatinum" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.plasmaBeamDirector), 
-				new Object[] {" G ", "GGG", " G ", 'G', Blocks.GLASS}));
-		GameRegistry.addRecipe(new ItemStack(ModItems.plasmaCore),
-				new Object[] { "CCC", "CPC", "CFC", 'C', Blocks.COAL_BLOCK, 'P', ModItems.plasmaIngot, 'F', ModItems.infinityFlame });
+				new Object[] {" G ", "GGG", " G ", 'G', "blockGlass"}));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.plasmaCore),
+				new Object[] { "CCC", "CPC", "CFC", 'C', "blockCoal", 'P', "ingotPlasma", 'F', ModItems.infinityFlame }));
+		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.plasmaLantern),
+				new Object[] { "NGN", "GCG", "NGN", 'C', ModItems.plasmaCore, 'N', "nuggetPlatinum", 'G', "paneGlass" }));
 
 		GameRegistry.addRecipe(new ItemStack(ModCombat.soulStealer), 
 				new Object[] { "SAS", "ADA", "SAS", 'S', Items.STICK, 'A', Items.STRING, 'D', Items.DIAMOND });
@@ -72,9 +74,9 @@ public class RecipeHandler {
 		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModFood.niceBiscuit, 4), 
 				new Object[] { "cropWheat", "cropWheat" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModMachines.machine_frame, 1, 0), 
-				new Object[] { "TTT", "TCT", "TTT", 'T', "ingotPlatinum", 'C', "chipBasic" }));
+				new Object[] { "TTT", "TCT", "TTT", 'T', "blockPlatinum", 'C', "chipBasic" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModMachines.machine_frame, 1, 1), 
-				new Object[] { "TTT", "TCT", "TTT", 'T', "ingotPlatinum", 'C', "chipAdavanced" }));
+				new Object[] { "TTT", "TCT", "TTT", 'T', "blockPlatinum", 'C', "chipAdavanced" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.platinumStick, 4), 
 				new Object[] {"T", "T", 'T', "ingotPlatinum"}));
 		
@@ -121,7 +123,7 @@ public class RecipeHandler {
 
 		registerToolRecipe("ingotTin", ModTools.tinPickaxe, ModTools.tinAxe, ModTools.tinShovel, ModTools.tinHoe, ModCombat.tinSword, ModItems.tinStick);
 		registerArmorRecipe("ingotTin", ModArmor.tinHelmet, ModArmor.tinChestplate, ModArmor.tinLeggings, ModArmor.tinBoots);
-		registerToolRecipe("blockPlatinum", ModTools.platinumPickaxe, ModTools.platinumAxe, ModTools.platinumShovel, ModTools.platinumHoe, ModCombat.platinumSword, Items.STICK);
+		registerToolRecipe("blockPlatinum", ModTools.platinumPickaxe, ModTools.platinumAxe, ModTools.platinumShovel, ModTools.platinumHoe, ModCombat.platinumSword, ModItems.platinumStick);
 		registerArmorRecipe("blockPlatinum", ModArmor.PlatinumHelmet, ModArmor.PlatinumChestplate, ModArmor.PlatinumLeggings, ModArmor.PlatinumBoots);
 
 			Utils.getLogger().info("Registered Crafting Recipes!");

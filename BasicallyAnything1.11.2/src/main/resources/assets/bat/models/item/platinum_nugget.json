@@ -1,6 +1,6 @@
 {
 	"parent": "item/generated",
 	"textures": {
-		"layer0": "bat:items/Platinum_Ingot"
+		"layer0": "bat:items/platinum_nugget"
 	}
 }

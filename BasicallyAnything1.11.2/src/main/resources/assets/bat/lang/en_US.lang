@@ -1,7 +1,8 @@
 tile.Platinum_Ore.name=Platinum Ore
 tile.Platinum_Nugget_Ore.name=Platinum Nugget Ore
 tile.platinum_block.name=Platinum Block
-tile.block_feeder.name=Player Feeder
+tile.feeder.name=Player Feeder
+tile.plasma_lantern.name=Plasma Lantern
 
 item.Platinum_Pickaxe.name=Platinum Pick
 item.Platinum_Axe.name=Platinum Axe
@@ -10,7 +11,7 @@ item.Platinum_Shovel.name=Platinum Shovel
 item.Platinum_Sword.name=Platinum Sword
 
 item.plasma_beam.name=Plasma Beam
-item.Plasma_Handle.name=Plasma Beam Handle
+item.plasma_handle.name=Plasma Beam Handle
 item.plasma_core.name=Plasma Core
 item.plasma_beam_director.name=Plasma Beam Director
 

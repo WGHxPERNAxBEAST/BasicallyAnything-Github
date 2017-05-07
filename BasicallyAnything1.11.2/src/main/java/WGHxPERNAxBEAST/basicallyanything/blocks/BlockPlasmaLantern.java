@@ -9,14 +9,15 @@ import net.minecraft.block.state.IBlockState;
 import net.minecraft.item.Item;
 import net.minecraft.util.ResourceLocation;
 
-public class BlockModBlocks extends Block {
+public class BlockPlasmaLantern extends Block {
 
-	public BlockModBlocks(String unlocalizedName, Material material, int hardness, int resistance) {
-		super(material);
+	public BlockPlasmaLantern(String unlocalizedName) {
+		super(Material.IRON);
 		this.setUnlocalizedName(unlocalizedName);
 		this.setRegistryName(new ResourceLocation(Reference.MODID, unlocalizedName));
-		this.setHardness(hardness);
-		this.setResistance(resistance);
+		this.setHardness(3);
+		this.setResistance(12);
+		this.setLightLevel(1);
 	}
 	
 	@Override

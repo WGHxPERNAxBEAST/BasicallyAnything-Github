@@ -53,7 +53,7 @@ public class ModMachines {
 	public static void init() {
 		chip = new ItemChip("chip");
 		machine_core = new ItemChip("machine_core");
-		feeder = new BlockFeeder("block_feeder");
+		feeder = new BlockFeeder("feeder");
 		breaker = new BlockBreaker("block_breaker");
 		gamemodeDetector = new BlockGamemodeDetector("gamemode_detector");
 		machine_frame = new BlockMachineFrame("machine_frame");
