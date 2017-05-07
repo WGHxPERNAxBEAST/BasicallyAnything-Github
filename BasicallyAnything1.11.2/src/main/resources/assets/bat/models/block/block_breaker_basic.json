@@ -2,7 +2,7 @@
 	"parent": "bat:block/machine",
 	"textures": {
 		"side": "bat:blocks/machine_basic",
-		"front": "bat:blocks/block_breaker_front_basic",
+		"front": "bat:blocks/machine_basic",
 		"alt": "bat:blocks/machine_basic"
 	}
 }

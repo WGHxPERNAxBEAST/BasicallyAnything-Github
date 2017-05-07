@@ -1,5 +1,7 @@
 package WGHxPERNAxBEAST.basicallyanything.blocks;
 
+import java.util.UUID;
+
 import WGHxPERNAxBEAST.basicallyanything.BasicallyAnything;
 import WGHxPERNAxBEAST.basicallyanything.client.gui.GuiHandler;
 import WGHxPERNAxBEAST.basicallyanything.handlers.EnumHandler.ChipTypes;
@@ -27,12 +29,6 @@ import net.minecraftforge.items.CapabilityItemHandler;
 import net.minecraftforge.items.IItemHandler;
 import net.minecraftforge.items.ItemStackHandler;
 
-/**
- * This is where the magic happens.
- * Our blocks details and information is here
- * @author CJMinecraft
- *
- */
 public class BlockBreaker extends BlockMachine {
 
 	/**

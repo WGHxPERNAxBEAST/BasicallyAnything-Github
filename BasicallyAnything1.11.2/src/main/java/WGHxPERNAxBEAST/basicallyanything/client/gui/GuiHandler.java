@@ -14,9 +14,8 @@ public class GuiHandler implements IGuiHandler {
 	/**
 	 * Each gui needs an ID
 	 */
-	public static final int FEEDER = 0;
 	public static final int BLOCK_BREAKER = 0;
-
+	public static final int FEEDER = 1;
 	
 	/**
 	 * Should return the container for that gui. This is called server side because servers handle items in guis

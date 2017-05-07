@@ -16,6 +16,7 @@ import WGHxPERNAxBEAST.basicallyanything.handlers.OreDictionaryHandler;
 import WGHxPERNAxBEAST.basicallyanything.handlers.RecipeHandler;
 import WGHxPERNAxBEAST.basicallyanything.init.ModArmor;
 import WGHxPERNAxBEAST.basicallyanything.init.ModBlocks;
+import WGHxPERNAxBEAST.basicallyanything.init.ModCapabilities;
 import WGHxPERNAxBEAST.basicallyanything.init.ModCombat;
 import WGHxPERNAxBEAST.basicallyanything.init.ModFood;
 import WGHxPERNAxBEAST.basicallyanything.init.ModItems;
@@ -34,7 +35,7 @@ import net.minecraftforge.fml.common.event.FMLPreInitializationEvent;
 import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.registry.GameRegistry;
 
-@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION)
+@Mod(modid = Reference.MODID, name = Reference.NAME, version = Reference.VERSION, guiFactory = Reference.GUI_FACTORY)
 public class BasicallyAnything {
 	
 	public static final CreativeTabs machines = new TabBATMachines();
@@ -82,12 +83,14 @@ public class BasicallyAnything {
 
 	
 	NetworkRegistry.INSTANCE.registerGuiHandler(BasicallyAnything.instance, new GuiHandler());
+	ModCapabilities.registerCapabilities();
 	
 	AchievementHandler.registerAchievements(); 
 	}
 	
 	@EventHandler
 	public void init(FMLInitializationEvent event) {
+		proxy.init();
 		GameRegistry.registerWorldGenerator(new OreGen(), 0);
 		GameRegistry.registerFuelHandler(new FuelHandler());
 		OreDictionaryHandler.registerOreDictionary();
@@ -96,7 +99,6 @@ public class BasicallyAnything {
 		RecipeHandler.registerCraftingRecipes();
 		RecipeHandler.registerFurnaceRecipes();
 		BatSoundHandler.init();
-		proxy.init();
 	}
 
 	@EventHandler

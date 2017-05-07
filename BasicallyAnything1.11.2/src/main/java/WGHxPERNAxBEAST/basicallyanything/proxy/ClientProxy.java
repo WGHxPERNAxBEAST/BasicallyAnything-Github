@@ -20,6 +20,7 @@ public class ClientProxy extends CommonProxy {
 	 * Everything that should be ran client side only in the pre initialization phase
 	 */
 	public void preInit() {
+		super.preInit();
 		ModBlocks.createStateMappers();
 		ModMachines.createStateMappers();
 		BatConfig.clientPreInit();
@@ -30,6 +31,7 @@ public class ClientProxy extends CommonProxy {
 	 */
 	@Override
 	public void init() {
+		super.init();
 		ModBlocks.registerBlockColours();
 		ModItems.registerItemColours();
 		ModTools.registerItemColours();

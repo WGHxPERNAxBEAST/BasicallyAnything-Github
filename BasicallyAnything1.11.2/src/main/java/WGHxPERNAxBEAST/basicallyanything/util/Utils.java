@@ -62,7 +62,7 @@ public class Utils {
 			}
 		}
 		f = f / (float) handler.getSlots();
-		return MathHelper.absFloor(f * 14.0F) + (i > 0 ? 1 : 0);
+		return MathHelper.floor(f * 14.0F) + (i > 0 ? 1 : 0);
 	}
 	
 	/**
@@ -124,7 +124,8 @@ public class Utils {
 		}
 		return filledSlots == maxSlot;
 	}
-/**
+	
+	/**
 	 * Gets the correct colour from any item stack using the ore dictionary
 	 * The item must be registered as a dye
 	 * @param stack The {@link ItemStack} to test
@@ -151,6 +152,5 @@ public class Utils {
 		}
 		return EnumDyeColor.WHITE;
 	}
-
 
 }

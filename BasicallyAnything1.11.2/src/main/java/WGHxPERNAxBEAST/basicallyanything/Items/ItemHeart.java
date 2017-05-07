@@ -5,11 +5,13 @@ import java.util.List;
 import WGHxPERNAxBEAST.basicallyanything.Reference;
 import WGHxPERNAxBEAST.basicallyanything.util.Utils;
 import net.minecraft.entity.player.EntityPlayer;
+import net.minecraft.init.SoundEvents;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
 import net.minecraft.util.ActionResult;
 import net.minecraft.util.EnumHand;
 import net.minecraft.util.ResourceLocation;
+import net.minecraft.util.SoundCategory;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraft.world.World;
 
@@ -36,6 +38,7 @@ public class ItemHeart extends Item {
 		if(player.getHealth() < player.getMaxHealth()) {
 			player.heal(2); //Heals them 2 HP or 1 heart
 			player.inventory.decrStackSize(player.inventory.currentItem, 1); //NEW 1.11
+			world.playSound(player, player.getPosition() , SoundEvents.ENTITY_PLAYER_BURP, SoundCategory.PLAYERS, 0.5F, world.rand.nextFloat() * 0.1F + 0.9F);
 		}
 		return super.onItemRightClick(world, player, hand);
 	}

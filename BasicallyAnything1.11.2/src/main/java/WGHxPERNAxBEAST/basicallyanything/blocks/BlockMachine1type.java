@@ -42,7 +42,7 @@ public class BlockMachine1type  extends BlockContainer implements IMetaBlockName
 		this.setRegistryName(new ResourceLocation(Reference.MODID, unlocalizedName));
 		this.setHardness(3);
 		this.setResistance(20);
-		this.setDefaultState(this.blockState.getBaseState().withProperty(TYPE, ChipTypes.BASIC));
+		this.setDefaultState(this.blockState.getBaseState());
 		this.isBlockContainer = true;
 	}
 	
@@ -51,19 +51,8 @@ public class BlockMachine1type  extends BlockContainer implements IMetaBlockName
 	 */
 	@Override
 	public String getSpecialName(ItemStack stack) {
-		return ChipTypes.values()[stack.getItemDamage() % ChipTypes.values().length].getName();
+		return null;
 	}
-	
-	/**
-	 * Makes sure that in the creative tab there are items for all the different chip types
-	 */
-	@Override
-	public void getSubBlocks(Item itemIn, CreativeTabs tab, NonNullList<ItemStack> list) {
-		for(int i = 0; i < ChipTypes.values().length; i++) {
-			list.add(new ItemStack(itemIn, 1, i));
-		}
-	}
-	
 	/**
 	 * Makes sure that when you pick block you get the correct block
 	 */
@@ -82,19 +71,11 @@ public class BlockMachine1type  extends BlockContainer implements IMetaBlockName
 	}
 	
 	/**
-	 * Returns the meta data from the blockstate. If the block has the {@link PropertyDirection} then this needs to be overridden
-	 */
-	@Override
-	public int getMetaFromState(IBlockState state) {
-		return ((ChipTypes)state.getValue(TYPE)).getID();
-	}
-	
-	/**
 	 * Returns the state from the meta data. If the block has the {@link PropertyDirection} then this needs to be overridden
 	 */
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
-		return this.getDefaultState().withProperty(TYPE, ChipTypes.values()[meta % ChipTypes.values().length]);
+		return this.getDefaultState();
 	}
 
 	/**

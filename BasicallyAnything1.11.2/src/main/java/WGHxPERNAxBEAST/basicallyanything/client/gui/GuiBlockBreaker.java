@@ -6,6 +6,8 @@ import java.util.List;
 import WGHxPERNAxBEAST.basicallyanything.Reference;
 import WGHxPERNAxBEAST.basicallyanything.blocks.BlockBreaker;
 import WGHxPERNAxBEAST.basicallyanything.container.ContainerBlockBreaker;
+import WGHxPERNAxBEAST.basicallyanything.network.PacketGetWorker;
+import WGHxPERNAxBEAST.basicallyanything.network.PacketHandler;
 import WGHxPERNAxBEAST.basicallyanything.tileentity.TileEntityBlockBreaker;
 import net.minecraft.client.gui.inventory.GuiContainer;
 import net.minecraft.client.renderer.GlStateManager;
@@ -16,11 +18,6 @@ import net.minecraft.util.ResourceLocation;
 import net.minecraft.util.text.TextFormatting;
 import net.minecraftforge.items.CapabilityItemHandler;
 
-/**
- * The {@link BlockBreaker}'s gui
- * @author CJMinecraft
- *
- */
 public class GuiBlockBreaker extends GuiContainer {
 
 	/**
@@ -28,6 +25,10 @@ public class GuiBlockBreaker extends GuiContainer {
 	 */
 	private TileEntityBlockBreaker te;
 	private IInventory playerInv;
+	
+	public static int cooldown, maxCooldown = 0;
+	
+	public static int sync = 0;
 	
 	/**
 	 * Typical {@link GuiContainer} constructor
@@ -69,6 +70,7 @@ public class GuiBlockBreaker extends GuiContainer {
 			text.add(TextFormatting.GRAY + I18n.format("gui.block_breaker.enchanted_book.tooltip"));
 			this.drawHoveringText(text, actualMouseX, actualMouseY);
 		}
+		
 	}
 
 }

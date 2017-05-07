@@ -1,8 +1,11 @@
 package WGHxPERNAxBEAST.basicallyanything.blocks;
 
+import java.util.UUID;
+
 import WGHxPERNAxBEAST.basicallyanything.BasicallyAnything;
 import WGHxPERNAxBEAST.basicallyanything.client.gui.GuiHandler;
 import WGHxPERNAxBEAST.basicallyanything.handlers.EnumHandler.ChipTypes;
+import WGHxPERNAxBEAST.basicallyanything.tileentity.TileEntityBlockBreaker;
 import WGHxPERNAxBEAST.basicallyanything.tileentity.TileEntityFeeder;
 import WGHxPERNAxBEAST.basicallyanything.util.Utils;
 import net.minecraft.block.properties.IProperty;
@@ -35,6 +38,7 @@ public class BlockFeeder extends BlockMachine1type {
 	 */
 	public static final PropertyDirection FACING = PropertyDirection.create("facing");
 	public static final PropertyBool ACTIVATED = PropertyBool.create("activated");
+	public static EntityLivingBase player;
 	
 	/**
 	 * Default block constructor
@@ -63,7 +67,7 @@ public class BlockFeeder extends BlockMachine1type {
 	 */
 	@Override
 	protected BlockStateContainer createBlockState() {
-		return new BlockStateContainer(this, new IProperty[] {TYPE,FACING,ACTIVATED});
+		return new BlockStateContainer(this, new IProperty[] {FACING,ACTIVATED});
 	}
 	
 	/**
@@ -80,7 +84,7 @@ public class BlockFeeder extends BlockMachine1type {
 	@Override
 	public IBlockState getStateForPlacement(World world, BlockPos pos, EnumFacing facing, float hitX, float hitY,
 			float hitZ, int meta, EntityLivingBase placer, EnumHand hand) {
-		return this.getDefaultState().withProperty(FACING, EnumFacing.getDirectionFromEntityLiving(pos, placer)).withProperty(ACTIVATED, Boolean.valueOf(false)).withProperty(TYPE, getStateFromMeta(meta * EnumFacing.values().length).getValue(TYPE));
+		return this.getDefaultState().withProperty(FACING, EnumFacing.getDirectionFromEntityLiving(pos, placer)).withProperty(ACTIVATED, Boolean.valueOf(false));
 	}
 	
 	/**
@@ -99,7 +103,6 @@ public class BlockFeeder extends BlockMachine1type {
 	 */
 	@Override
 	public IBlockState getStateFromMeta(int meta) {
-		ChipTypes type = ChipTypes.values()[(int)(meta / EnumFacing.values().length) % ChipTypes.values().length]; //Gets the type from the meta
 		EnumFacing facing = EnumFacing.values()[meta % EnumFacing.values().length]; //Gets the EnumFacing from the meta
 		return this.getDefaultState().withProperty(FACING, facing); //Returns the correct state
 	}
@@ -134,19 +137,6 @@ public class BlockFeeder extends BlockMachine1type {
 		return new TileEntityFeeder();
 	}
 	
-	/**
-	 * Called when you break the block so that all of the items inside of the tile entity drop
-	 */
-	@Override
-	public void breakBlock(World world, BlockPos pos, IBlockState state) {
-		TileEntityFeeder te = (TileEntityFeeder) world.getTileEntity(pos);
-		IItemHandler handler = te.getCapability(CapabilityItemHandler.ITEM_HANDLER_CAPABILITY, null);
-		for(int slot = 0; slot < handler.getSlots(); slot++) {
-			ItemStack stack = handler.getStackInSlot(slot);
-			InventoryHelper.spawnItemStack(world, pos.getX(), pos.getY(), pos.getZ(), stack);
-		}
-		super.breakBlock(world, pos, state);
-	}
 	
 	/**
 	 * Opens our block's gui when the player right clicks on the block
@@ -158,6 +148,12 @@ public class BlockFeeder extends BlockMachine1type {
 			playerIn.openGui(BasicallyAnything.instance, GuiHandler.FEEDER, worldIn, pos.getX(), pos.getY(), pos.getZ());
 		}
 		return true;
+	}	
+	@Override
+	public void onBlockPlacedBy(World worldIn, BlockPos pos, IBlockState state, EntityLivingBase placer,
+			ItemStack stack) {
+		super.onBlockPlacedBy(worldIn, pos, state, placer, stack);
+		player = placer;
 	}
 	
 }

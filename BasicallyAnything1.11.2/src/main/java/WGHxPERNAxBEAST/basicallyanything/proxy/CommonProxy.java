@@ -1,6 +1,7 @@
 package WGHxPERNAxBEAST.basicallyanything.proxy;
 
 import WGHxPERNAxBEAST.basicallyanything.Reference;
+import WGHxPERNAxBEAST.basicallyanything.network.PacketHandler;
 import WGHxPERNAxBEAST.basicallyanything.tileentity.TileEntityBlockBreaker;
 import WGHxPERNAxBEAST.basicallyanything.tileentity.TileEntityCanvas;
 import WGHxPERNAxBEAST.basicallyanything.tileentity.TileEntityFeeder;
@@ -9,7 +10,7 @@ import net.minecraftforge.fml.common.registry.GameRegistry;
 public class CommonProxy {
 	
 	public void preInit() {
-	
+		PacketHandler.registerMessages(Reference.MODID);
 	}
 	
 	public void init() {

@@ -37,7 +37,7 @@ public class BatConfigGuiFactory implements IModGuiFactory {
 	 */
 	@Override
 	public Class<? extends GuiScreen> mainConfigGuiClass() {
-		return BoeConfigGui.class;
+		return BatConfigGui.class;
 	}
 
 	/**
@@ -61,13 +61,13 @@ public class BatConfigGuiFactory implements IModGuiFactory {
 	 * @author CJMinecraft
 	 *
 	 */
-	public static class BoeConfigGui extends GuiConfig {
+	public static class BatConfigGui extends GuiConfig {
 		
 		/**
 		 * Settting up the screen
 		 * @param parentScreen The prior screen
 		 */
-		public BoeConfigGui(GuiScreen parentScreen) {
+		public BatConfigGui(GuiScreen parentScreen) {
 			super(parentScreen, getConfigElements(), Reference.MODID, false, false, I18n.format("gui.config.main_title"));
 		}
 
@@ -117,7 +117,7 @@ public class BatConfigGuiFactory implements IModGuiFactory {
 	}
 
 	public GuiScreen createConfigGui(GuiScreen parentScreen) {
-		return new BoeConfigGui(parentScreen);
+		return new BatConfigGui(parentScreen);
 	}
 
 }
