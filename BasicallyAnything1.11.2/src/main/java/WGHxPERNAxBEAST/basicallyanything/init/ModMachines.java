@@ -9,6 +9,7 @@ import WGHxPERNAxBEAST.basicallyanything.blocks.BlockCanvas;
 import WGHxPERNAxBEAST.basicallyanything.blocks.BlockFeeder;
 import WGHxPERNAxBEAST.basicallyanything.blocks.BlockGamemodeDetector;
 import WGHxPERNAxBEAST.basicallyanything.blocks.BlockMachineFrame;
+import WGHxPERNAxBEAST.basicallyanything.blocks.BlockTimeWarpClock;
 import WGHxPERNAxBEAST.basicallyanything.blocks.BlockTinDoor;
 import WGHxPERNAxBEAST.basicallyanything.blocks.BlockTinFence;
 import WGHxPERNAxBEAST.basicallyanything.blocks.BlockTinFenceGate;
@@ -49,6 +50,7 @@ public class ModMachines {
 	public static Block machine_frame;
 	public static Block breaker;
 	public static Block gamemodeDetector;
+	public static Block TimeWarpClock;
 	
 	public static void init() {
 		chip = new ItemChip("chip");
@@ -57,6 +59,7 @@ public class ModMachines {
 		breaker = new BlockBreaker("block_breaker");
 		gamemodeDetector = new BlockGamemodeDetector("gamemode_detector");
 		machine_frame = new BlockMachineFrame("machine_frame");
+		TimeWarpClock = new BlockTimeWarpClock("time_warp_clock");
 	}
 	
 	public static void register() {
@@ -66,6 +69,7 @@ public class ModMachines {
 		registerBlock(breaker, new ItemBlockBreaker(breaker));
 		registerBlock(gamemodeDetector);
 		registerBlock(machine_frame, new ItemBlockMeta(machine_frame));
+		registerBlock(TimeWarpClock, new ItemBlockMeta(TimeWarpClock));
 	}
 	
 	public static void registerRenders() {
@@ -73,8 +77,9 @@ public class ModMachines {
 		for(int i = 0; i < EnumHandler.ChipTypes.values().length; i++) {
 			registerRender(breaker, i, "block_breaker_" + EnumHandler.ChipTypes.values()[i].getName());
 			registerRender(machine_frame, i, "machine_frame_" + EnumHandler.ChipTypes.values()[i].getName());
-			registerRender(chip, i, "machine_core_" + EnumHandler.ChipTypes.values()[i].getName());
+			registerRender(machine_core, i, "machine_core_" + EnumHandler.ChipTypes.values()[i].getName());
 			registerRender(chip, i, "chip_" + EnumHandler.ChipTypes.values()[i].getName());
+			registerRender(TimeWarpClock, i, "time_warp_clock_" + EnumHandler.ChipTypes.values()[i].getName());
 		}
 		registerRender(gamemodeDetector);
 	}

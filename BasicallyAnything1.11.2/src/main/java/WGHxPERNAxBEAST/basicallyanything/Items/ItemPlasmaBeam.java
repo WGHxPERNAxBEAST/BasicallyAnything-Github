@@ -30,17 +30,18 @@ public class ItemPlasmaBeam extends ItemTool {
 		this.setUnlocalizedName(unlocalizedName);
 		this.setRegistryName(new ResourceLocation(Reference.MODID, unlocalizedName));
 		new ItemStack(ModItems.plasmaHandle).setTagCompound(new ItemStack(this).getTagCompound());
+		this.getToolClasses(new ItemStack(Items.DIAMOND_PICKAXE));
+		this.getToolClasses(new ItemStack(Items.DIAMOND_AXE));
+		this.getToolClasses(new ItemStack(Items.DIAMOND_SHOVEL));
+		this.getToolClasses(new ItemStack(Items.DIAMOND_SWORD));
 	}
 	
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
 		pos = playerIn.getPosition();
 		if(playerIn.getHeldItemOffhand() != new ItemStack(Items.SHIELD)){
-			playerIn.replaceItemInInventory(EntityEquipmentSlot.MAINHAND.getSlotIndex(), new ItemStack(new ItemStack(ModItems.plasmaHandle).getTagCompound()));
+			playerIn.replaceItemInInventory(EntityEquipmentSlot.MAINHAND.getSlotIndex(), new ItemStack(ModItems.plasmaHandle));
 			worldIn.playSound(playerIn, pos, BatSoundHandler.PLASMA_DEACTIVATE, SoundCategory.PLAYERS, 2.0F, 1.0F);
-		}
-		else {
-
 		}
 		return super.onItemRightClick(worldIn, playerIn, handIn);
 	}

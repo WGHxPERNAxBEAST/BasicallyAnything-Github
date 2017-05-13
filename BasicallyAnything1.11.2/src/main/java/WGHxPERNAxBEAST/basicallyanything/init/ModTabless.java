@@ -40,6 +40,7 @@ public class ModTabless {
 	
 
 	public static void registerItem(Item item) {
+		item.setCreativeTab(null);
 		GameRegistry.register(item);
 		Utils.getLogger().info("Registered item" + item.getUnlocalizedName().substring(5));
 	}

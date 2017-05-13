@@ -37,7 +37,7 @@ public class ItemPlasmaHandle extends Item {
 	@Override
 	public ActionResult<ItemStack> onItemRightClick(World worldIn, EntityPlayer playerIn, EnumHand handIn) {
 		pos = playerIn.getPosition();
-		playerIn.replaceItemInInventory(EntityEquipmentSlot.MAINHAND.getSlotIndex(), new ItemStack(new ItemStack(ModTabless.PlasmaBeam).getTagCompound()));
+		playerIn.replaceItemInInventory(EntityEquipmentSlot.MAINHAND.getSlotIndex(), new ItemStack(ModTabless.PlasmaBeam));
 		worldIn.playSound(playerIn, pos, BatSoundHandler.PLASMA_IGNITION, SoundCategory.PLAYERS, 2.0F, 1.0F);
 		return super.onItemRightClick(worldIn, playerIn, handIn);
 	}

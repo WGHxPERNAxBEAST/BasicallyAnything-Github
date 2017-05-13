@@ -62,8 +62,8 @@ public class ModBlocks {
 	public static Block plasmaLantern;
 
 	public static void init() {
-		platinum_ore = new BlockPlatinumOre("Platinum_Ore", "Platinum_Ore");
-		platinum_nugget_ore = new BlockPlatinumNuggetOre("Platinum_Nugget_Ore", "Platinum_Nugget_Ore");
+		platinum_ore = new BlockPlatinumOre("platinum_ore", "platinum_ore");
+		platinum_nugget_ore = new BlockTinOre("platinum_nugget_ore", "platinum_nugget_ore");
 		platinum_block = new BlockPlatinum("platinum_block", "platinum_block");
 		tinOre = new BlockTinOre("tin_ore", "tin_ore");
 		tinBlock = new BlockTinBlock("tin_block");

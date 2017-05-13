@@ -58,6 +58,10 @@ public class OreDictionaryHandler {
 		OreDictionary.registerOre("machineframeAdvanced", new ItemStack(ModMachines.machine_frame, 1, 1)); //Advanced 
 		OreDictionary.registerOre("machinecoreBasic", new ItemStack(ModMachines.machine_core, 1, 0)); //Basic 
 		OreDictionary.registerOre("machinecoreAdvanced", new ItemStack(ModMachines.machine_core, 1, 1)); //Advanced 
+		OreDictionary.registerOre("blockBreakerBasic", new ItemStack(ModMachines.breaker, 1, 0)); //Basic 
+		OreDictionary.registerOre("blockBreakerAdvanced", new ItemStack(ModMachines.breaker, 1, 1)); //Advanced
+		OreDictionary.registerOre("twcBasic", new ItemStack(ModMachines.TimeWarpClock, 1, 0)); //Basic 
+		OreDictionary.registerOre("twcAdvanced", new ItemStack(ModMachines.TimeWarpClock, 1, 1)); //Advanced
 		
 		OreDictionary.registerOre("ingotPlasma", ModItems.plasmaIngot);
 	}

@@ -1,0 +1,7 @@
+{
+	"variants": {
+		"type=overworld": { "model": "bat:platinum_nugget_ore_overworld" },
+		"type=nether": { "model": "bat:platinum_nugget_ore_nether" },
+		"type=end": { "model": "bat:platinum_nugget_ore_end" }
+	}
+}

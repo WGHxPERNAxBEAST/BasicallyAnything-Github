@@ -1,8 +1,10 @@
-tile.Platinum_Ore.name=Platinum Ore
-tile.Platinum_Nugget_Ore.name=Platinum Nugget Ore
+tile.platinum_ore.name=Platinum Ore
+tile.platinum_nugget_ore.name=Platinum Nugget Ore
 tile.platinum_block.name=Platinum Block
 tile.feeder.name=Player Feeder
 tile.plasma_lantern.name=Plasma Lantern
+tile.time_warp_clock.basic.name=Basic Time Warp Clock
+tile.time_warp_clock.advanced.name=Advanced Time Warp Clock
 
 item.Platinum_Pickaxe.name=Platinum Pick
 item.Platinum_Axe.name=Platinum Axe

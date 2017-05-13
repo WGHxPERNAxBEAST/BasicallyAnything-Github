@@ -1,6 +1,6 @@
 {
 	"parent": "block/cube_all",
 	"textures": {
-		"all": "bat:blocks/platinum_ore"
+		"all": "bat:blocks/platinum_nugget_ore_nether"
 	}
 }

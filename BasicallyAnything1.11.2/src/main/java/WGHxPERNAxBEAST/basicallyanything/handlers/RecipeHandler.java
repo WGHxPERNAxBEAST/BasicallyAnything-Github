@@ -76,14 +76,14 @@ public class RecipeHandler {
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModMachines.machine_frame, 1, 0), 
 				new Object[] { "TTT", "TCT", "TTT", 'T', "blockPlatinum", 'C', "chipBasic" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModMachines.machine_frame, 1, 1), 
-				new Object[] { "TTT", "TCT", "TTT", 'T', "blockPlatinum", 'C', "chipAdavanced" }));
+				new Object[] { "TTT", "TCT", "TTT", 'T', "blockPlatinum", 'C', "chipAdvanced" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.platinumStick, 4), 
 				new Object[] {"T", "T", 'T', "ingotPlatinum"}));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModMachines.breaker, 1, 0), 
-				new Object[] { "MMM", "PCP", "MMM", 'P', ModTools.platinumPickaxe, 'R', "dustRedstone", 'M', "machineframeBasic", 'C', "machinecoreBasic" }));
+				new Object[] { "MMM", "PCP", "MMM", 'P', ModTools.platinumPickaxe, 'M', "machineframeBasic", 'C', "machinecoreBasic" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModMachines.breaker, 1, 1), 
-				new Object[] { "MMM", "PCP", "MMM", 'P', ModTools.platinumPickaxe, 'R', "dustRedstone", 'M', "machineframeAdvanced", 'C', "machinecoreAdvanced" }));
+				new Object[] { "MMM", "BCB", "MMM", 'B', "blockBreakerBasic", 'M', "machineframeAdvanced", 'C', "machinecoreAdvanced" }));
 		
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.tinSlabHalf, 2), 
 				new Object[] {"TTT", 'T', "ingotTin" }));
@@ -131,7 +131,12 @@ public class RecipeHandler {
 
 	public static void registerFurnaceRecipes() {
 		GameRegistry.addSmelting(ModBlocks.platinum_ore, new ItemStack(ModItems.platinumIngot), 3.0F);
-		GameRegistry.addSmelting(ModBlocks.platinum_nugget_ore, new ItemStack(ModItems.platinumNugget), 0.4F);
+		GameRegistry.addSmelting(new ItemStack(ModBlocks.platinum_nugget_ore, 1, 0), new ItemStack(ModItems.platinumNugget), 0.4F);
+		GameRegistry.addSmelting(new ItemStack(ModBlocks.platinum_nugget_ore, 1, 1), new ItemStack(ModItems.platinumNugget), 0.4F);
+		GameRegistry.addSmelting(new ItemStack(ModBlocks.platinum_nugget_ore, 1, 2), new ItemStack(ModItems.platinumNugget), 0.4F);
+		GameRegistry.addSmelting(new ItemStack(ModBlocks.tinOre, 1, 0), new ItemStack(ModItems.tinIngot), 2.0F);
+		GameRegistry.addSmelting(new ItemStack(ModBlocks.tinOre, 1, 1), new ItemStack(ModBlocks.tinOre, 2, 0), 2.0F);
+		GameRegistry.addSmelting(new ItemStack(ModBlocks.tinOre, 1, 2), new ItemStack(ModBlocks.tinOre, 2, 1), 2.0F);
 		
 			Utils.getLogger().info("Registered Furnace Recipes!");
 	}

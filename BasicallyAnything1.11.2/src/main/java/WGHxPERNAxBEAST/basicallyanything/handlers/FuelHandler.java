@@ -9,6 +9,11 @@ public class FuelHandler implements IFuelHandler{
 
 	@Override
 	public int getBurnTime(ItemStack fuel) {
+		if(fuel.getItem() == ModFood.niceBiscuit)
+			return 200; //This will smelt half an item. A full item would be 200 ticks
+		if(fuel.getItem() == ModItems.infinityFlame) {
+			return (int) Math.pow(2, 31); //This is a very big number which will work on both 32 and 64 bit computers
+		}
 		return 0;
 	}
 
