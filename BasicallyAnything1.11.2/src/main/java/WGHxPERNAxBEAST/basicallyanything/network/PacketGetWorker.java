@@ -15,6 +15,13 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.relauncher.Side;
 
+/**
+ * A network message which will receive data about a {@link TileEntity} from the
+ * {@link Side#SERVER}
+ * 
+ * @author CJMinecraft
+ *
+ */
 public class PacketGetWorker implements IMessage {
 
 	/**

@@ -1,0 +1,13 @@
+{
+	"name": "BasicallyAnything",
+	"version": "1.1.1",
+	"changelog": [
+		"+Added update checker",
+		"+Added most recipes",
+		"Working on Plasma Blade",
+		"Working on Time Warp Clock",
+		"Working on Cell Phone",
+		"-Removed Herobrian"
+	],
+	"download": ""
+}

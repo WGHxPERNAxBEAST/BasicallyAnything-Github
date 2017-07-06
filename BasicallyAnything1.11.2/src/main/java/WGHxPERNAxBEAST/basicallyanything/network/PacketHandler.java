@@ -4,6 +4,12 @@ import net.minecraftforge.fml.common.network.NetworkRegistry;
 import net.minecraftforge.fml.common.network.simpleimpl.SimpleNetworkWrapper;
 import net.minecraftforge.fml.relauncher.Side;
 
+/**
+ * Handles all of our network messages
+ * 
+ * @author CJMinecraft
+ *
+ */
 public class PacketHandler {
 
 	/**

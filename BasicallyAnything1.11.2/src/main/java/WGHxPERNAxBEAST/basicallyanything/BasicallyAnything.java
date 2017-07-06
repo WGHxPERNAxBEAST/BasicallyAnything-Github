@@ -46,6 +46,8 @@ public class BasicallyAnything {
 	public static final CreativeTabs armor = new TabBATArmor();
 	public static final CreativeTabs food = new TabBATFood();
 	
+	public static ModChecker modChecker;
+	
 	WGHxPERNAxBEAST.basicallyanything.handlers.EventHandler eventHandler = new WGHxPERNAxBEAST.basicallyanything.handlers.EventHandler();
 	
 	@Mod.Instance(Reference.MODID)
@@ -65,6 +67,8 @@ public class BasicallyAnything {
 		ModCombat.init();
 		ModFood.init();
 		ModTabless.init();
+		
+		modChecker = new ModChecker();
 		
 		//////////////////REGISTER////////////////////////////////////////////////		
 		ModMachines.register();

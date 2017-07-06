@@ -11,7 +11,13 @@ import net.minecraftforge.fml.common.network.simpleimpl.IMessage;
 import net.minecraftforge.fml.common.network.simpleimpl.IMessageHandler;
 import net.minecraftforge.fml.common.network.simpleimpl.MessageContext;
 import net.minecraftforge.fml.relauncher.Side;
-
+/**
+ * A packet which will update fields in a class based on the information
+ * provided
+ * 
+ * @author CJMinecraft
+ *
+ */
 public class PacketReturnWorker implements IMessage {
 
 	/**
