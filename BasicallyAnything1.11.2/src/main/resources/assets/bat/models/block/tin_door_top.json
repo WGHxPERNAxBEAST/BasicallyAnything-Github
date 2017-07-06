@@ -1,7 +1,0 @@
-{
-    "parent": "block/door_top",
-    "textures": {
-        "bottom": "bat:blocks/door_tin_lower",
-        "top": "bat:blocks/door_tin_upper"
-    }
-}

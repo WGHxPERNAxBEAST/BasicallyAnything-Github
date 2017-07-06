@@ -1,6 +1,0 @@
-{
-    "variants": {
-        "half=bottom": { "model": "bat:tin_slab_bottom" },
-        "half=top": { "model": "bat:tin_slab_top" }
-    }
-}

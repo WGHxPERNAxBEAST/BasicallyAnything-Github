@@ -1,7 +1,0 @@
-{
-	"parent": "item/handheld",
-	"textures": {
-		"layer0": "bat:items/paint_brush_0",
-		"layer1": "bat:items/paint_brush_1"
-	}
-}
