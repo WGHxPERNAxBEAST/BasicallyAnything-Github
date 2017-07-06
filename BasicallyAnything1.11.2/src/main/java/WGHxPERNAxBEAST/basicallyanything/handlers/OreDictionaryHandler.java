@@ -42,15 +42,6 @@ public class OreDictionaryHandler {
 		OreDictionary.registerOre("normFood", Items.POTATO);
 		OreDictionary.registerOre("normFood", Items.PUMPKIN_PIE);
 		OreDictionary.registerOre("normFood", Items.SPECKLED_MELON);
-		OreDictionary.registerOre("normFood", ModFood.niceBiscuit);
-		
-		OreDictionary.registerOre("oreTin", ModBlocks.tinOre);
-		OreDictionary.registerOre("ingotTin", ModItems.tinIngot);
-		OreDictionary.registerOre("nuggetTin", ModItems.tinNugget);
-		OreDictionary.registerOre("blockTin", ModBlocks.tinBlock);
-		OreDictionary.registerOre("stickTin", ModItems.tinStick);
-		
-		OreDictionary.registerOre("fabric", new ItemStack(ModItems.fabric));		
 		
 		OreDictionary.registerOre("chipBasic", new ItemStack(ModMachines.chip, 1, 0)); //Basic 
 		OreDictionary.registerOre("chipAdvanced", new ItemStack(ModMachines.chip, 1, 1)); //Advanced 

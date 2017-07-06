@@ -32,10 +32,6 @@ public class ModTools {
 	public static ItemModAxe platinumAxe;
 	public static ItemHoe platinumHoe;
 	public static ItemSpade platinumShovel;
-	public static ItemPickaxe tinPickaxe;
-	public static ItemModAxe tinAxe; //NOTICE WE USE THE ITEMMODAXE NOT ITEMAXE
-	public static ItemHoe tinHoe;
-	public static ItemSpade tinShovel;
 
 	
 	public static void init(){
@@ -43,10 +39,6 @@ public class ModTools {
 		platinumAxe = new ItemModAxe(platinumMaterial, "Platinum_Axe", new ItemStack(ModItems.platinumIngot));
 		platinumHoe = new ItemModHoe(platinumMaterial, "Platinum_Hoe", new ItemStack(ModItems.platinumIngot));
 		platinumShovel = new ItemModShovel(platinumMaterial, "Platinum_Shovel", new ItemStack(ModItems.platinumIngot));
-		tinPickaxe = new ItemModPickaxe(tinMaterial, "tin_pickaxe", new ItemStack(ModItems.tinIngot));
-		tinAxe = new ItemModAxe(tinMaterial, "tin_axe", new ItemStack(ModItems.tinIngot));
-		tinHoe = new ItemModHoe(tinMaterial, "tin_hoe", new ItemStack(ModItems.tinIngot));
-		tinShovel = new ItemModShovel(tinMaterial, "tin_shovel", new ItemStack(ModItems.tinIngot));
 	}
 	
 	public static void register() {
@@ -54,12 +46,6 @@ public class ModTools {
 		registerItem(platinumAxe);
 		registerItem(platinumHoe);
 		registerItem(platinumShovel);
-		registerItem(tinPickaxe);
-		registerItem(tinAxe);
-		registerItem(tinHoe);
-		registerItem(tinShovel);
-
-		
 	}
 	
 	public static void registerRenders(){
@@ -67,28 +53,8 @@ public class ModTools {
 		registerRender(platinumAxe);
 		registerRender(platinumHoe);
 		registerRender(platinumShovel);
-		registerRender(tinPickaxe);
-		registerRender(tinAxe);
-		registerRender(tinHoe);
-		registerRender(tinShovel);
-		
 	}
 
-	@SideOnly(Side.CLIENT)
-	public static void registerItemColours() {
-		Minecraft.getMinecraft().getItemColors().registerItemColorHandler(new IItemColor() {
-			
-			@Override
-			public int getColorFromItemstack(ItemStack stack, int tintIndex) {
-				if(stack.hasTagCompound() && tintIndex == 1)
-					if(stack.getTagCompound().hasKey("colour"))
-						return stack.getTagCompound().getInteger("colour");
-				return 0x0b27cd;
-			}
-		}, platinumPickaxe);
-		Utils.getLogger().info("Registered item colors!");
-	}
-	
 	public static void registerItem(Item item) {
 		item.setCreativeTab(BasicallyAnything.tools);
 		GameRegistry.register(item);

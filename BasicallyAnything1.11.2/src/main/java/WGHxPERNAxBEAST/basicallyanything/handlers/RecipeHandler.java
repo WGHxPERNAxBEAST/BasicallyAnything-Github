@@ -58,21 +58,7 @@ public class RecipeHandler {
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.plasmaLantern),
 				new Object[] { "NGN", "GCG", "NGN", 'C', ModItems.plasmaCore, 'N', "nuggetPlatinum", 'G', "paneGlass" }));
 
-		GameRegistry.addRecipe(new ItemStack(ModCombat.soulStealer), 
-				new Object[] { "SAS", "ADA", "SAS", 'S', Items.STICK, 'A', Items.STRING, 'D', Items.DIAMOND });
-		GameRegistry.addRecipe(new ItemStack(ModBlocks.tinBlock), 
-				new Object[] { "TTT", "TTT", "TTT", 'T', ModItems.tinIngot });
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.tinIngot, 9), 
-				new Object[] { ModBlocks.tinBlock });
-		GameRegistry.addRecipe(new ItemStack(ModItems.tinIngot), new Object[] { "NNN", "NNN", "NNN", 'N', ModItems.tinNugget });
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.tinNugget, 9), 
-				new Object[] { ModItems.tinIngot });
-		GameRegistry.addRecipe(new ShapedOreRecipe(ModFood.tinApple, 
-				new Object[] { "III", "IAI", "III", 'I', "blockTin", 'A', Items.APPLE }));
-		GameRegistry.addRecipe(new ItemStack(ModItems.infinityFlame), 
-				new Object[] { "CCC", "CFC", "CCC", 'C', Blocks.COAL_BLOCK, 'F', Items.FIRE_CHARGE });
-		GameRegistry.addRecipe(new ShapelessOreRecipe(new ItemStack(ModFood.niceBiscuit, 4), 
-				new Object[] { "cropWheat", "cropWheat" }));
+	
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModMachines.machine_frame, 1, 0), 
 				new Object[] { "TTT", "TCT", "TTT", 'T', "blockPlatinum", 'C', "chipBasic" }));
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModMachines.machine_frame, 1, 1), 
@@ -85,44 +71,6 @@ public class RecipeHandler {
 		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModMachines.breaker, 1, 1), 
 				new Object[] { "MMM", "BCB", "MMM", 'B', "blockBreakerBasic", 'M', "machineframeAdvanced", 'C', "machinecoreAdvanced" }));
 		
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.tinSlabHalf, 2), 
-				new Object[] {"TTT", 'T', "ingotTin" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.tinStairs, 4), 
-				new Object[] { "T  ", "TT ", "TTT", 'T', "ingotTin" }));
-		
-		GameRegistry.addShapelessRecipe(new ItemStack(ModItems.fabric, 2), 
-				new Object[] { Items.STRING, Items.STRING });
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.paintBrush), 
-				new Object[] { "FFF", "SSS", " S ", 'F', "fabric", 'S', "stickWood" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.canvas, 2), 
-				new Object[] { "FF", "FF", 'F', "fabric" }));
-		
-		GameRegistry.addRecipe(new ShapelessOreRecipe(ModBlocks.tinButton, 
-				new Object[] { "nuggetTin" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.tinDoor, 3), 
-				new Object[] { "TT", "TT", "TT", 'T', "ingotTin" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModItems.tinStick, 4), 
-				new Object[] {"T", "T", 'T', "ingotTin"}));
-		GameRegistry.addRecipe(new ShapedOreRecipe(new ItemStack(ModBlocks.tinFence, 3), 
-				new Object[] { "TST", "TST", 'S', "stickTin", 'T', "ingotTin" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(ModBlocks.tinFenceGate, 
-				new Object[] { "STS", "STS", 'S', "stickTin", 'T', "ingotTin" }));
-		GameRegistry.addRecipe(new ShapedOreRecipe(ModBlocks.tinPressurePlate, 
-				new Object[] { "TT", 'T', "ingotTin" }));
-		
-		RecipeSorter.register("itemColour", RecipeItemColour.class, Category.SHAPELESS, "after:minecraft:shapeless"); //Make sure to register the recipe type first!
-		GameRegistry.addRecipe(
-				new RecipeItemColour(new ItemStack(ModTools.platinumPickaxe)));
-		GameRegistry.addRecipe(
-				new RecipeItemColour(new ItemStack(ModItems.platinumIngot)));
-		GameRegistry.addRecipe(
-				new RecipeItemColour(new ItemStack(ModItems.paintBrush)));
-		RecipeSorter.register("clearColour", RecipeClearColour.class, Category.SHAPELESS, "after:minecraft:shapeless"); //Make sure to register the recipe type first!
-		GameRegistry.addRecipe(new RecipeClearColour(
-				new ItemStack(ModBlocks.canvas)));
-
-		registerToolRecipe("ingotTin", ModTools.tinPickaxe, ModTools.tinAxe, ModTools.tinShovel, ModTools.tinHoe, ModCombat.tinSword, ModItems.tinStick);
-		registerArmorRecipe("ingotTin", ModArmor.tinHelmet, ModArmor.tinChestplate, ModArmor.tinLeggings, ModArmor.tinBoots);
 		registerToolRecipe("blockPlatinum", ModTools.platinumPickaxe, ModTools.platinumAxe, ModTools.platinumShovel, ModTools.platinumHoe, ModCombat.platinumSword, ModItems.platinumStick);
 		registerArmorRecipe("blockPlatinum", ModArmor.PlatinumHelmet, ModArmor.PlatinumChestplate, ModArmor.PlatinumLeggings, ModArmor.PlatinumBoots);
 
@@ -134,9 +82,6 @@ public class RecipeHandler {
 		GameRegistry.addSmelting(new ItemStack(ModBlocks.platinum_nugget_ore, 1, 0), new ItemStack(ModItems.platinumNugget), 0.4F);
 		GameRegistry.addSmelting(new ItemStack(ModBlocks.platinum_nugget_ore, 1, 1), new ItemStack(ModItems.platinumNugget), 0.4F);
 		GameRegistry.addSmelting(new ItemStack(ModBlocks.platinum_nugget_ore, 1, 2), new ItemStack(ModItems.platinumNugget), 0.4F);
-		GameRegistry.addSmelting(new ItemStack(ModBlocks.tinOre, 1, 0), new ItemStack(ModItems.tinIngot), 2.0F);
-		GameRegistry.addSmelting(new ItemStack(ModBlocks.tinOre, 1, 1), new ItemStack(ModBlocks.tinOre, 2, 0), 2.0F);
-		GameRegistry.addSmelting(new ItemStack(ModBlocks.tinOre, 1, 2), new ItemStack(ModBlocks.tinOre, 2, 1), 2.0F);
 		
 			Utils.getLogger().info("Registered Furnace Recipes!");
 	}

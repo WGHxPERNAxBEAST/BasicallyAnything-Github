@@ -21,7 +21,6 @@ public class ClientProxy extends CommonProxy {
 	 */
 	public void preInit() {
 		super.preInit();
-		ModBlocks.createStateMappers();
 		ModMachines.createStateMappers();
 		BatConfig.clientPreInit();
 	}
@@ -32,9 +31,6 @@ public class ClientProxy extends CommonProxy {
 	@Override
 	public void init() {
 		super.init();
-		ModBlocks.registerBlockColours();
-		ModItems.registerItemColours();
-		ModTools.registerItemColours();
 	}
 
 	
@@ -56,7 +52,6 @@ public class ClientProxy extends CommonProxy {
 
 		ModelBakery.registerItemVariants(ModMachines.chip, new ResourceLocation(Reference.MODID, "chip_basic"), new ResourceLocation(Reference.MODID, "chip_advanced"));
 		ModelBakery.registerItemVariants(Item.getItemFromBlock(ModMachines.breaker), new ResourceLocation(Reference.MODID, "block_breaker_basic"), new ResourceLocation(Reference.MODID, "block_breaker_advanced"));
-		ModelBakery.registerItemVariants(Item.getItemFromBlock(ModBlocks.tinOre), new ResourceLocation(Reference.MODID, "tin_ore_overworld"), new ResourceLocation(Reference.MODID, "tin_ore_nether"), new ResourceLocation(Reference.MODID, "tin_ore_end"));
 		ModelBakery.registerItemVariants(Item.getItemFromBlock(ModMachines.machine_frame), new ResourceLocation(Reference.MODID, "machine_frame_basic"), new ResourceLocation(Reference.MODID, "machine_frame_advanced"));
 		ModelBakery.registerItemVariants(ModMachines.machine_core, new ResourceLocation(Reference.MODID, "machine_core_basic"), new ResourceLocation(Reference.MODID, "machine_core_advanced"));
 		ModelBakery.registerItemVariants(Item.getItemFromBlock(ModMachines.TimeWarpClock), new ResourceLocation(Reference.MODID, "time_warp_clock_basic"), new ResourceLocation(Reference.MODID, "time_warp_clock_advanced"));
